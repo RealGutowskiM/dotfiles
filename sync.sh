@@ -4,7 +4,7 @@ dir=~/.dotfiles
 olddir=~/.dotfiles_old
 
 echo "Syncing dotfiles with system..."
-echo "Creating $olddir directory for storage"
+echo -e "Creating $olddir directory for storage\n"
 
 mkdir -p $olddir
 
