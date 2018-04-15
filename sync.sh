@@ -8,7 +8,7 @@ echo -e "Creating $olddir directory for storage\n"
 
 mkdir -p $olddir
 
-for filepath in "$dir"/*
+for filepath in "$dir"/**
 do
     file=$(basename $filepath)
 
