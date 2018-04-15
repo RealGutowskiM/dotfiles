@@ -26,9 +26,10 @@ let g:deoplete#enable_at_startup = 1
 
 " run :call dein#install() to install dein and plugins
 
-syntax on
 color dracula
 
+syntax on
+set termguicolors
 set smartindent
 set clipboard=unnamed
 set shiftwidth=2
