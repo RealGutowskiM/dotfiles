@@ -13,6 +13,8 @@ if dein#load_state('~/.cache/dein')
  call dein#add('wokalski/autocomplete-flow')
  call dein#add('Shougo/neosnippet')
  call dein#add('Shougo/neosnippet-snippets')
+ call dein#add('vim-airline/vim-airline')
+ call dein#add('vim-airline/vim-airline-themes')
  call dein#add('dracula/vim')
 
  call dein#end()
@@ -24,7 +26,12 @@ filetype plugin indent on
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_completed_snippet = 1
 
+" flow
 let g:autocomplete_flow#insert_paren_after_function = 0
+
+" airline
+let g:airline_theme = 'wombat'
+set laststatus=2 " always show statusbar
 
 " run :call dein#install() to install dein and plugins
 
