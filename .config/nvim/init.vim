@@ -10,11 +10,10 @@ if dein#load_state('~/.cache/dein')
 
  call dein#add('~/.cache/dein')
  call dein#add('Shougo/deoplete.nvim')
+ call dein#add('wokalski/autocomplete-flow')
+ call dein#add('Shougo/neosnippet')
+ call dein#add('Shougo/neosnippet-snippets')
  call dein#add('dracula/vim')
- if !has('nvim')
-   call dein#add('roxma/nvim-yarp')
-   call dein#add('roxma/vim-hug-neovim-rpc')
- endif
 
  call dein#end()
  call dein#save_state()
@@ -23,6 +22,9 @@ endif
 filetype plugin indent on
 
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_completed_snippet = 1
+
+let g:autocomplete_flow#insert_paren_after_function = 0
 
 " run :call dein#install() to install dein and plugins
 
