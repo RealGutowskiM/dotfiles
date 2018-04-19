@@ -14,6 +14,7 @@ if dein#load_state('~/.cache/dein')
  call dein#add('Shougo/neosnippet-snippets')
  call dein#add('vim-airline/vim-airline')
  call dein#add('vim-airline/vim-airline-themes')
+ call dein#add('tpope/vim-surround')
  call dein#add('dracula/vim')
 
  call dein#end()
