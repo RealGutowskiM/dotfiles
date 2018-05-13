@@ -12,13 +12,17 @@ if dein#load_state('~/.cache/dein')
  call dein#add('Shougo/deoplete.nvim')
  call dein#add('Shougo/neosnippet')
  call dein#add('Shougo/neosnippet-snippets')
+ call dein#add('w0rp/ale')
  call dein#add('vim-airline/vim-airline')
  call dein#add('vim-airline/vim-airline-themes')
  call dein#add('tpope/vim-surround')
  call dein#add('pangloss/vim-javascript')
  call dein#add('chemzqm/vim-jsx-improve')
  call dein#add('mhartington/nvim-typescript')
+ call dein#add('posva/vim-vue')
  call dein#add('othree/jspc.vim')
+ call dein#add('othree/yajs.vim')
+ call dein#add('HerringtonDarkholme/yats.vim')
  call dein#add('dracula/vim')
 
  call dein#end()
@@ -36,6 +40,14 @@ set laststatus=2 " always show statusbar
 
 " javascript
 let g:javascript_plugin_jsdoc = 1
+let g:nvim_typescript#javascript_support = 1
+let g:nvim_typescript#vue_support = 1
+
+" ALE
+let g:ale_fixers = {
+\   'javascript': ['eslint'],
+\}
+let g:ale_fix_on_save = 1
 
 " run :call dein#install() to install dein and plugins
 
