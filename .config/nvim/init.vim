@@ -16,12 +16,10 @@ if dein#load_state('~/.cache/dein')
  call dein#add('vim-airline/vim-airline')
  call dein#add('vim-airline/vim-airline-themes')
  call dein#add('tpope/vim-surround')
- call dein#add('pangloss/vim-javascript')
  call dein#add('chemzqm/vim-jsx-improve')
  call dein#add('mhartington/nvim-typescript')
  call dein#add('posva/vim-vue')
  call dein#add('othree/jspc.vim')
- call dein#add('othree/yajs.vim')
  call dein#add('HerringtonDarkholme/yats.vim')
  call dein#add('dracula/vim')
 
@@ -40,8 +38,8 @@ set laststatus=2 " always show statusbar
 
 " javascript
 let g:javascript_plugin_jsdoc = 1
-let g:nvim_typescript#javascript_support = 1
 let g:nvim_typescript#vue_support = 1
+let g:jsx_ext_required = 0
 
 " ALE
 let g:ale_fixers = {
@@ -56,7 +54,7 @@ color dracula
 syntax on
 set termguicolors
 set smartindent
-set clipboard=unnamed
+set clipboard+=unnamedplus
 set shiftwidth=2
 set tabstop=2
 set softtabstop=2
