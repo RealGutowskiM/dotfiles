@@ -34,6 +34,13 @@ let g:deoplete#enable_completed_snippet = 1
 
 " airline
 let g:airline_theme = 'wombat'
+let g:airline#extensions#branch#enabled = 0 " needs fugitive to work
+let g:airline#extensions#tabline#enabled = 1 
+let g:airline_section_warning = '' 
+let g:airline_section_y = '' 
+let g:airline_section_x = ''
+let g:airline_left_sep = ' ☯  '
+let g:airline_right_sep = ' ☯  '
 set laststatus=2 " always show statusbar
 
 " javascript
