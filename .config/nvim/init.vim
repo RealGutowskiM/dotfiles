@@ -83,6 +83,7 @@ set cursorline
 set showmatch
 set incsearch
 set hlsearch
+set wildmenu
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*
 set noswapfile
 set noruler
