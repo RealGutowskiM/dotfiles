@@ -43,6 +43,18 @@ let g:airline_left_sep = ' ☯  '
 let g:airline_right_sep = ' ☯  '
 set laststatus=2 " always show statusbar
 
+" move lines up and down
+nnoremap <C-j> :m .+1<CR>==
+nnoremap <C-k> :m .-2<CR>==
+inoremap <C-j> <Esc>:m .+1<CR>==gi
+inoremap <C-k> <Esc>:m .-2<CR>==gi
+vnoremap <C-j> :m '>+1<CR>gv=gv
+vnoremap <C-k> :m '<-2<CR>gv=gv
+
+" move between buffers
+map <C-h> <Esc>:bprev<CR>
+map <C-l> <Esc>:bnext<CR>
+
 " javascript
 let g:javascript_plugin_jsdoc = 1
 let g:nvim_typescript#vue_support = 1
@@ -53,12 +65,6 @@ let g:ale_fixers = {
 \   'javascript': ['eslint'],
 \}
 let g:ale_fix_on_save = 1
-
-" Moving between splits
-map <C-h> <C-W>h
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-l> <C-W>l
 
 " run :call dein#install() to install dein and plugins
 
