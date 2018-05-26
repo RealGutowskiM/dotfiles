@@ -81,6 +81,7 @@ color dracula
 
 syntax on
 set termguicolors
+set scrolloff=10
 set smartindent
 set clipboard+=unnamedplus
 set shiftwidth=2
