@@ -19,11 +19,11 @@ do
 
     echo $file
 
-    echo "Moving ~/.$file to $olddir/$file"
+    echo "Moving ~/$file to $olddir/$file"
 
     mv ~/$file $olddir
 
-    echo "Creating symlink from $file to ~/.$file"
+    echo "Creating symlink from $file to ~/$file"
 
     ln -s $filepath ~/$file
 done
