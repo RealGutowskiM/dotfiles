@@ -64,6 +64,9 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 map <C-h> <Esc>:bprev<CR>
 map <C-l> <Esc>:bnext<CR>
 
+" clear search highlight
+map <C-c> <Esc>:noh<CR>
+
 " javascript
 let g:javascript_plugin_jsdoc = 1
 let g:nvim_typescript#vue_support = 1
