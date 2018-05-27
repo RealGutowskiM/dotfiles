@@ -432,7 +432,7 @@ label-mode-background = #FFBB00
 label-focused = %icon% %name%
 label-focused-background = ${colors.background}
 label-focused-foreground = ${colors.foreground}
-label-focused-underline = #6790eb
+label-focused-underline = ${colors.cyan}
 label-focused-padding = 2
 
 ; Available tokens:
