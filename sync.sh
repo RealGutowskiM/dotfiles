@@ -17,11 +17,14 @@ do
         continue
     fi
 
-    echo $file
+    echo "Processing: $file..."
 
-    echo "Moving ~/$file to $olddir/$file"
+    if [ -e ~/$file ]
+    then
+      echo "Moving ~/$file to $olddir/$file"
 
-    mv ~/$file $olddir
+      mv ~/$file $olddir
+    fi
 
     echo "Creating symlink from $file to ~/$file"
 
