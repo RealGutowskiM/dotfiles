@@ -124,7 +124,7 @@ bindsym $mod+Shift+0 move container to workspace 10; workspace 10
 #####################################################################################################################
 
 # start dmenu
-bindsym $mod+shift+d exec --no-startup-id dmenu_run -i -nb '#282a36' -nf '#f8f8f2' -sb '#44475a' -sf '#f8f8f2' -fn 'NotoMonoRegular:bold:pixelsize=16'
+bindsym $mod+shift+d exec --no-startup-id dmenu_run -i -nb '#282a36' -nf '#f8f8f2' -sb '#44475a' -sf '#f8f8f2' -fn 'NotoMonoRegular:bold:pixelsize=18'
 
 # gmrun
 bindsym mod1+F2 exec --no-startup-id gmrun
