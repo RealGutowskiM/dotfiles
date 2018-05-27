@@ -419,8 +419,8 @@ format = <label-state> <label-mode>
 
 label-mode = %mode%
 label-mode-padding = 2
-label-mode-foreground = #000000
-label-mode-background = #FFBB00
+label-mode-foreground = ${colors.background}
+label-mode-background = ${colors.cyan}
 
 ; Available tokens:
 ;   %name%
