@@ -75,7 +75,7 @@ let g:jsx_ext_required = 0
 
 " ALE
 let g:ale_fixers = {
-\   'javascript': ['eslint'],
+\   'javascript': ['standard'],
 \}
 let g:ale_fix_on_save = 1
 
@@ -86,6 +86,8 @@ color dracula
 syntax on
 set termguicolors
 set scrolloff=10
+set list
+set listchars=space:.,tab:>>,trail:$
 set smartindent
 set clipboard+=unnamedplus
 set shiftwidth=2
