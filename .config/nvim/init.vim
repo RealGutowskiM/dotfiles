@@ -33,11 +33,15 @@ filetype plugin indent on
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_completed_snippet = 1
 
+" grep
+set grepprg=git\ grep\ -n\ $*
+command! -nargs=+ Ggrep execute 'silent grep! <args>' | copen
+
 " netrw
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_winsize = 25
-map <C-p> <Esc>:Lex<CR>
+map <silent> <C-p> <Esc>:Lex<CR>
 
 " Delete netrw when it is not in the window
 autocmd FileType netrw setl bufhidden=wipe
@@ -99,7 +103,6 @@ set cursorline
 set showmatch
 set incsearch
 set hlsearch
-set autochdir
 set wildmenu
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*
 set noswapfile
