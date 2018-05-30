@@ -33,9 +33,19 @@ filetype plugin indent on
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_completed_snippet = 1
 
-" grep
-set grepprg=git\ grep\ -n\ $*
-command! -nargs=+ Ggrep execute 'silent grep! <args>' | copen
+" git grep
+func GitGrep(...)
+  let save = &grepprg
+  set grepprg=git\ grep\ -n\ $*
+  let s = 'grep'
+  for i in a:000
+    let s = s . ' ' . i
+  endfor
+  exe s
+  let &grepprg = save
+endfun
+command! -nargs=+ Ggrep execute 'silent call GitGrep(<f-args>)' | copen
+map <C-g> <Esc>:Ggrep 
 
 " netrw
 let g:netrw_banner = 0
