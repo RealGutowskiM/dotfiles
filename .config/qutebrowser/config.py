@@ -11,9 +11,8 @@
 # host per line - A zip-file of any of the above, with either only one
 # file, or a file   named `hosts` (with any extension).
 # Type: List of Url
-c.content.host_blocking.lists = ['https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts']
+c.content.host_blocking.lists = ['https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn/hosts']
 c.content.host_blocking.enabled = True
-
 # Enable JavaScript.
 # Type: Bool
 config.set('content.javascript.enabled', True, 'file://*')
