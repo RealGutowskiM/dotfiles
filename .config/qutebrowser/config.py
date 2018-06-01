@@ -165,4 +165,5 @@ c.fonts.tabs = '12pt monospace'
 c.fonts.web.family.standard = None
 
 # Bindings for normal mode
-config.bind('M', 'hint links spawn mpv {hint-url}')
+config.bind('m', 'hint links spawn mpv {hint-url}')
+config.bind('M', 'hint links spawn mpv --fs {hint-url}')
