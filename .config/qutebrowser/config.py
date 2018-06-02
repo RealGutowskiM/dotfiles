@@ -50,7 +50,7 @@ c.window.title_format = '{perc}{title}{title_sep}qutebrowser'
 # Text color of the completion widget. May be a single color to use for
 # all columns or a list of three colors, one for each column.
 # Type: List of QtColor, or QtColor
-c.colors.completion.fg = ['white', 'white', 'white']
+c.colors.completion.fg = ['#f8f8f2', '#f8f8f2', '#f8f8f2']
 
 # Background color of the statusbar.
 # Type: QssColor
@@ -58,7 +58,16 @@ c.colors.statusbar.normal.bg = '#282A36'
 
 # Foreground color of the statusbar in insert mode.
 # Type: QssColor
-c.colors.statusbar.insert.fg = 'white'
+c.colors.statusbar.insert.fg = '#f8f8f2'
+
+c.colors.hints.bg = '#282A36'
+c.colors.hints.fg = '#f8f8f2'
+c.colors.hints.match.fg = '#50fa7b'
+c.hints.border = '1px solid #ff79c6'
+
+c.colors.keyhint.bg = '#282A36'
+c.colors.keyhint.fg = '#f8f8f2'
+c.colors.keyhint.suffix.fg = '#ff79c6'
 
 # Foreground color of the URL in the statusbar on successful load
 # (https).
@@ -79,7 +88,7 @@ c.colors.tabs.indicator.start = '#0000aa'
 
 # Foreground color of unselected odd tabs.
 # Type: QtColor
-c.colors.tabs.odd.fg = 'white'
+c.colors.tabs.odd.fg = '#f8f8f2'
 
 # Background color of unselected odd tabs.
 # Type: QtColor
@@ -87,7 +96,7 @@ c.colors.tabs.odd.bg = 'grey'
 
 # Foreground color of unselected even tabs.
 # Type: QtColor
-c.colors.tabs.even.fg = 'white'
+c.colors.tabs.even.fg = '#f8f8f2'
 
 # Background color of unselected even tabs.
 # Type: QtColor
@@ -95,7 +104,7 @@ c.colors.tabs.even.bg = 'grey'
 
 # Foreground color of selected odd tabs.
 # Type: QtColor
-c.colors.tabs.selected.odd.fg = 'white'
+c.colors.tabs.selected.odd.fg = '#f8f8f2'
 
 # Background color of selected odd tabs.
 # Type: QtColor
@@ -103,7 +112,7 @@ c.colors.tabs.selected.odd.bg = '#282A36'
 
 # Foreground color of selected even tabs.
 # Type: QtColor
-c.colors.tabs.selected.even.fg = 'white'
+c.colors.tabs.selected.even.fg = '#f8f8f2'
 
 # Background color of selected even tabs.
 # Type: QtColor
@@ -112,7 +121,7 @@ c.colors.tabs.selected.even.bg = '#282A36'
 # Background color for webpages if unset (or empty to use the theme's
 # color).
 # Type: QtColor
-c.colors.webpage.bg = 'white'
+c.colors.webpage.bg = '#f8f8f2'
 
 # Default monospace fonts. Whenever "monospace" is used in a font
 # setting, it's replaced with the fonts listed here.
