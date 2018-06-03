@@ -600,21 +600,35 @@ hide_edge_borders both
 bindsym $mod+shift+b exec --no-startup-id i3-msg border toggle
 
 #changing border style
-#super+t in arcolinux is starting terminal
-bindsym $mod+t border normal
-bindsym $mod+y border 1pixel
-bindsym $mod+u border none
+#bindsym $mod+t border normal
+#bindsym $mod+y border 1pixel
+#bindsym $mod+u border none
 
+default_border none
+default_floating_border none
 
-#new_window pixel 1
-new_window normal
-#new_window none
-
-#new_float pixel 1
-new_float normal
-#new_float none
-
-
+#set $bgb            #282a36
+#set $bg             #282a36AA
+#set $fg             #f8f8f2
+#set $tf             #f8f8f2AA
+#set $hi             #f1fa7c
+#set $tx             #040404
+#set $pk             #ff79c6
+## yellow
+#set $yw             #f1fa7c
+## green
+#set $gn             #50fa7b
+## red
+#set $rd             #ff5555
+#set $id             #ff79c6
+#
+## set some nice colors      border  background  text  indicator
+#client.focused              $bg     $id         $tx     $id
+#client.unfocused            $bg     $bg         $tf     $id
+#client.focused_inactive     $bg     $bg         $pk     $id
+#client.urgent               $yw     $yw         $tx     $id
+##border & indicator are ignored
+#client.placeholder          $bg     $bg         $bg     $bg
 
 
 #####################################################################################################################
@@ -636,7 +650,7 @@ popup_during_fullscreen smart
 # want it
 
 
-for_window [class="^.*"] border pixel 2
+#for_window [class="^.*"] border pixel 2
 gaps inner 5
 gaps outer 5
 #smart_gaps on
