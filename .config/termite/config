@@ -13,13 +13,14 @@ geometry = 900x650
 highlight = #2f2f2f
 icon_name = terminal
 modify_other_keys = false
-mouse_autohide = false
+mouse_autohide = true
 scroll_on_output = false
 scroll_on_keystroke = true
 scrollback_lines = 15000
 size_hints = false
 search_wrap = true
 urgent_on_bell = true
+hyperlinks = true
 
 [hints]
 #font = Monospace 12
