@@ -35,7 +35,7 @@ c.statusbar.position = 'bottom'
 c.statusbar.widgets = ['keypress', 'url', 'scroll', 'history', 'tabs', 'progress']
 
 c.tabs.position = 'top'
-c.tabs.padding = {'top': 1, 'bottom': 1, 'left': 5, 'right': 5}
+c.tabs.padding = {'top': 1, 'bottom': 0, 'left': 5, 'right': 5}
 c.tabs.select_on_remove = 'next'
 c.tabs.title.format = '{index}: ({protocol}) {title}'
 c.tabs.title.format_pinned = '{index}'

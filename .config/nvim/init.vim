@@ -57,14 +57,14 @@ map <silent> <C-p> <Esc>:Lex<CR>
 autocmd FileType netrw setl bufhidden=wipe
 
 " airline
-let g:airline_theme = 'wombat'
+"let g:airline_theme = 'wombat'
 let g:airline#extensions#branch#enabled = 0 " needs fugitive to work
 let g:airline#extensions#tabline#enabled = 1 
 let g:airline_section_warning = '' 
 let g:airline_section_y = '' 
 let g:airline_section_x = ''
-let g:airline_left_sep = ' ☯  '
-let g:airline_right_sep = ' ☯  '
+let g:airline_left_sep = ' ☯ '
+let g:airline_right_sep = ' ☯ '
 set laststatus=2 " always show statusbar
 
 " move lines up and down
@@ -95,9 +95,8 @@ let g:ale_fix_on_save = 1
 
 " run :call dein#install() to install dein and plugins
 
-color dracula
-
 syntax on
+color dracula
 set termguicolors
 set scrolloff=10
 set list
