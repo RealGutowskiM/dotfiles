@@ -13,6 +13,7 @@ if dein#load_state('~/.cache/dein')
  call dein#add('Shougo/neosnippet')
  call dein#add('Shougo/neosnippet-snippets')
  call dein#add('w0rp/ale')
+ call dein#add('ctrlpvim/ctrlp.vim')
  call dein#add('vim-airline/vim-airline')
  call dein#add('vim-airline/vim-airline-themes')
  call dein#add('tpope/vim-surround')
@@ -48,10 +49,16 @@ command! -nargs=+ Ggrep execute 'silent call GitGrep(<f-args>)' | copen
 map <C-g> <Esc>:Ggrep 
 
 " netrw
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_winsize = 25
-map <silent> <C-p> <Esc>:Lex<CR>
+" let g:netrw_banner = 0
+" let g:netrw_liststyle = 3
+" let g:netrw_winsize = 25
+" map <silent> <C-p> <Esc>:Lex<CR>
+
+" ctrlp
+let g:ctrlp_map = '<C-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_show_hidden = 1
 
 " Delete netrw when it is not in the window
 autocmd FileType netrw setl bufhidden=wipe
