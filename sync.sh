@@ -24,6 +24,8 @@ do
       echo "Moving ~/$file to $olddir/$file"
 
       mv ~/$file $olddir
+    else
+      mkdir `dirname ~/$filename`
     fi
 
     echo "Creating symlink from $file to ~/$file"

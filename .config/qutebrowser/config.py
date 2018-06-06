@@ -197,3 +197,7 @@ c.fonts.web.family.standard = None
 # Bindings for normal mode
 config.bind('m', 'hint links spawn mpv --loop {hint-url}')
 config.bind('M', 'hint links spawn mpv --fs --loop {hint-url}')
+config.bind('H', 'tab-prev')
+config.bind('L', 'tab-next')
+config.bind('J', 'back')
+config.bind('K', 'forward')
