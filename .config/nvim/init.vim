@@ -13,6 +13,7 @@ if dein#load_state('~/.cache/dein')
  call dein#add('Shougo/neosnippet')
  call dein#add('Shougo/neosnippet-snippets')
  call dein#add('w0rp/ale')
+ call dein#add('neomake/neomake')
  call dein#add('ctrlpvim/ctrlp.vim')
  call dein#add('vim-airline/vim-airline')
  call dein#add('vim-airline/vim-airline-themes')
@@ -32,6 +33,12 @@ filetype plugin indent on
 " completion
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_completed_snippet = 1
+
+" neomake
+augroup localneomake
+  autocmd! BufWritePost * Neomake
+augroup end
+let g:neomake_markdown_enabled_makers = []
 
 " git grep
 func GitGrep(...)
