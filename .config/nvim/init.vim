@@ -33,10 +33,15 @@ filetype plugin indent on
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_completed_snippet = 1
 
+" neosnippet
+imap <C-space> <Plug>(neosnippet_expand_or_jump)
+smap <C-space> <Plug>(neosnippet_expand_or_jump)
+xmap <C-space> <Plug>(neosnippet_expand_target)
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
 " neomake
-augroup localneomake
-  autocmd! BufWritePost * Neomake
-augroup end
+call neomake#configure#automake('w')
 let g:neomake_markdown_enabled_makers = []
 
 " git grep
