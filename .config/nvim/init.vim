@@ -37,8 +37,9 @@ let g:deoplete#enable_completed_snippet = 1
 imap <C-space> <Plug>(neosnippet_expand_or_jump)
 smap <C-space> <Plug>(neosnippet_expand_or_jump)
 xmap <C-space> <Plug>(neosnippet_expand_target)
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
 
 " neomake
 call neomake#configure#automake('w')
