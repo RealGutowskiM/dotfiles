@@ -18,7 +18,6 @@ if dein#load_state('~/.cache/dein')
  call dein#add('vim-airline/vim-airline')
  call dein#add('vim-airline/vim-airline-themes')
  call dein#add('tpope/vim-surround')
- call dein#add('mhartington/nvim-typescript')
  call dein#add('othree/jspc.vim')
  call dein#add('sheerun/vim-polyglot')
  call dein#add('dracula/vim')
@@ -102,7 +101,6 @@ map <C-c> <Esc>:noh<CR>
 
 " javascript
 let g:javascript_plugin_jsdoc = 1
-let g:nvim_typescript#vue_support = 1
 let g:jsx_ext_required = 0
 
 " ALE
