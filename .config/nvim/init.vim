@@ -14,7 +14,9 @@ if dein#load_state('~/.cache/dein')
  call dein#add('Shougo/neosnippet-snippets')
  call dein#add('w0rp/ale')
  call dein#add('neomake/neomake')
+ call dein#add('scrooloose/nerdtree')
  call dein#add('ctrlpvim/ctrlp.vim')
+ call dein#add('tpope/vim-fugitive')
  call dein#add('vim-airline/vim-airline')
  call dein#add('vim-airline/vim-airline-themes')
  call dein#add('tpope/vim-surround')
@@ -45,7 +47,7 @@ call neomake#configure#automake('w')
 let g:neomake_markdown_enabled_makers = []
 
 " git grep
-func GitGrep(...)
+func GGitGrep(...)
   let save = &grepprg
   set grepprg=git\ grep\ -n\ $*
   let s = 'grep'
@@ -55,14 +57,17 @@ func GitGrep(...)
   exe s
   let &grepprg = save
 endfun
-command! -nargs=+ Ggrep execute 'silent call GitGrep(<f-args>)' | copen
-map <C-g> <Esc>:Ggrep 
+command! -nargs=+ GitGrep execute 'silent call GGitGrep(<f-args>)' | copen
+map <C-g> <Esc>:GitGrep 
 
 " netrw
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_winsize = 25
 " map <silent> <C-p> <Esc>:Lex<CR>
+
+" NERDTree
+map <C-n> :NERDTreeToggle<CR>
 
 " ctrlp
 let g:ctrlp_map = '<C-p>'
@@ -75,7 +80,7 @@ autocmd FileType netrw setl bufhidden=wipe
 
 " airline
 "let g:airline_theme = 'wombat'
-let g:airline#extensions#branch#enabled = 0 " needs fugitive to work
+let g:airline#extensions#branch#enabled = 1 " needs fugitive to work
 let g:airline#extensions#tabline#enabled = 1 
 let g:airline_section_warning = '' 
 let g:airline_section_y = '' 
