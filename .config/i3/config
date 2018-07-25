@@ -604,32 +604,31 @@ bindsym $mod+shift+b exec --no-startup-id i3-msg border toggle
 #bindsym $mod+y border 1pixel
 #bindsym $mod+u border none
 
-default_border 1pixel
-default_floating_border 1pixel
+default_border none
+default_floating_border none
 
-set $bgb            #282a36
-set $bg             #282a36
-set $fg             #f8f8f2
-set $tf             #f8f8f2
-set $hi             #f1fa7c
-set $tx             #040404
-set $pk             #ff79c6
-set $cm             #6272a4
-# yellow
-set $yw             #f1fa7c
-# green
-set $gn             #50fa7b
-# red
-set $rd             #ff5555
-set $id             #ff79c6
-
-# set some nice colors      border  background  text  indicator
-client.focused              $bg     $id         $tx     $cm
-client.unfocused            $bg     $bg         $tf     $cm
-client.focused_inactive     $bg     $bg         $pk     $cm
-client.urgent               $yw     $yw         $tx     $cm
-#border & indicator are ignored
-client.placeholder          $bg     $bg         $bg     $bg
+#set $bgb            #282a36
+#set $bg             #282a36AA
+#set $fg             #f8f8f2
+#set $tf             #f8f8f2AA
+#set $hi             #f1fa7c
+#set $tx             #040404
+#set $pk             #ff79c6
+## yellow
+#set $yw             #f1fa7c
+## green
+#set $gn             #50fa7b
+## red
+#set $rd             #ff5555
+#set $id             #ff79c6
+#
+## set some nice colors      border  background  text  indicator
+#client.focused              $bg     $id         $tx     $id
+#client.unfocused            $bg     $bg         $tf     $id
+#client.focused_inactive     $bg     $bg         $pk     $id
+#client.urgent               $yw     $yw         $tx     $id
+##border & indicator are ignored
+#client.placeholder          $bg     $bg         $bg     $bg
 
 
 #####################################################################################################################
