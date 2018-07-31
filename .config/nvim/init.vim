@@ -55,6 +55,7 @@ let g:netrw_winsize = 25
 " map <silent> <C-p> <Esc>:Lex<CR>
 
 " NERDTree
+let NERDTreeShowHidden = 1
 map <C-n> :NERDTreeToggle<CR>
 
 " ctrlp
