@@ -2,31 +2,23 @@
 if &compatible
  set nocompatible
 endif
-" Add the dein installation directory into runtimepath
-set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
-if dein#load_state('~/.cache/dein')
- call dein#begin('~/.cache/dein')
+call plug#begin('~/.vim/plugged')
 
- call dein#add('~/.cache/dein')
- call dein#add('Shougo/deoplete.nvim')
- call dein#add('Shougo/neosnippet')
- call dein#add('Shougo/neosnippet-snippets')
- call dein#add('w0rp/ale')
- call dein#add('neomake/neomake')
- call dein#add('scrooloose/nerdtree')
- call dein#add('ctrlpvim/ctrlp.vim')
- call dein#add('tpope/vim-fugitive')
- call dein#add('vim-airline/vim-airline')
- call dein#add('vim-airline/vim-airline-themes')
- call dein#add('tpope/vim-surround')
- call dein#add('othree/jspc.vim')
- call dein#add('sheerun/vim-polyglot')
- call dein#add('dracula/vim')
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
+Plug 'w0rp/ale'
+Plug 'neomake/neomake'
+Plug 'scrooloose/nerdtree'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-surround'
+Plug 'sheerun/vim-polyglot'
+Plug 'dracula/vim'
 
- call dein#end()
- call dein#save_state()
-endif
+call plug#end()
 
 filetype plugin indent on
 
@@ -106,12 +98,14 @@ map <C-c> <Esc>:noh<CR>
 
 " javascript
 let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_flow = 1
 let g:jsx_ext_required = 0
 
 " ALE
 let g:ale_fixers = {
 \   'javascript': ['standard'],
 \}
+let g:ale_lint_on_save = 1
 let g:ale_fix_on_save = 1
 
 " run :call dein#install() to install dein and plugins
