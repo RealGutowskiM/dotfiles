@@ -131,3 +131,4 @@ alias vim="nvim"
 
 #neofetch
 echo "Hi, how are you?"
+source /usr/share/nvm/init-nvm.sh

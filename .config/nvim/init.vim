@@ -1,6 +1,6 @@
 " dein
 if &compatible
- set nocompatible
+  set nocompatible
 endif
 
 call plug#begin('~/.vim/plugged')
@@ -21,10 +21,6 @@ Plug 'dracula/vim'
 call plug#end()
 
 filetype plugin indent on
-
-" completion
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#enable_completed_snippet = 1
 
 " neosnippet
 imap <C-space> <Plug>(neosnippet_expand_or_jump)
@@ -107,8 +103,7 @@ let g:ale_fixers = {
 \}
 let g:ale_lint_on_save = 1
 let g:ale_fix_on_save = 1
-
-" run :call dein#install() to install dein and plugins
+let g:ale_completion_enabled = 1
 
 syntax on
 color dracula
