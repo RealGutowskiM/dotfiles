@@ -8,7 +8,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'w0rp/ale'
-Plug 'neomake/neomake'
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
@@ -29,10 +28,6 @@ xmap <C-space> <Plug>(neosnippet_expand_target)
 if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif
-
-" neomake
-call neomake#configure#automake('w')
-let g:neomake_markdown_enabled_makers = []
 
 " git grep
 func GGitGrep(...)
