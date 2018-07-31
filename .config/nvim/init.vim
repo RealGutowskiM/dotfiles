@@ -95,11 +95,10 @@ map <C-c> <Esc>:noh<CR>
 " javascript
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_flow = 1
-let g:jsx_ext_required = 0
 
 " ALE
 let g:ale_fixers = {
-\   'javascript': ['standard'],
+\   'javascript': ['standard']
 \}
 let g:ale_lint_on_save = 1
 let g:ale_fix_on_save = 1
