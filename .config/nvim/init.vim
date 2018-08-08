@@ -7,6 +7,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
+Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -14,7 +15,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
-Plug 'sheerun/vim-polyglot'
 Plug 'dracula/vim'
 
 call plug#end()
