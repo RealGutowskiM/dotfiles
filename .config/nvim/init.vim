@@ -109,6 +109,7 @@ set list
 set listchars=space:.,tab:>>,trail:$
 set smartindent
 set clipboard+=unnamedplus
+set completeopt=menu,menuone,preview,noselect,noinsert
 set shiftwidth=2
 set tabstop=2
 set softtabstop=2
