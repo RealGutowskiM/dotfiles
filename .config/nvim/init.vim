@@ -94,9 +94,6 @@ let g:javascript_plugin_flow = 1
 
 " ALE
 let g:ale_vue_vls_use_global = 1
-let g:ale_linters = {
-\ 'javascript': ['standard']
-\}
 let g:ale_fixers = {
 \ 'javascript': ['standard']
 \}
