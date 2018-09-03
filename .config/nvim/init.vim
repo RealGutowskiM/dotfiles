@@ -60,7 +60,7 @@ let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_show_hidden = 1
 
 " Delete netrw when it is not in the window
-autocmd FileType netrw setl bufhidden=wipe
+"autocmd FileType netrw setl bufhidden=wipe
 
 " airline
 "let g:airline_theme = 'wombat'
@@ -119,6 +119,7 @@ set cursorline
 set showmatch
 set incsearch
 set hlsearch
+set hidden
 set wildmenu
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*
 set noswapfile
