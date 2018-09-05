@@ -116,6 +116,7 @@ set softtabstop=2
 set expandtab
 set number relativenumber
 set cursorline
+set ignorecase smartcase
 set showmatch
 set incsearch
 set hlsearch
