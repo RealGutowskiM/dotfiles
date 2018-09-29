@@ -8,6 +8,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'sheerun/vim-polyglot'
+Plug 'mattn/emmet-vim'
 Plug 'w0rp/ale'
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -107,6 +108,11 @@ let g:ale_fixers = {
 let g:ale_lint_on_save = 1
 let g:ale_fix_on_save = 1
 let g:ale_completion_enabled = 1
+
+" emmet
+let g:user_emmet_install_global = 0
+let g:user_emmet_leader_key = '<C-e>'
+autocmd FileType html,css EmmetInstall
 
 syntax on
 color dracula
