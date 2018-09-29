@@ -81,6 +81,9 @@ inoremap <C-k> <Esc>:m .-2<CR>==gi
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
+" terminal
+tnoremap <Esc> <C-\><C-n>
+
 " move between buffers
 map <C-h> <Esc>:bprev<CR>
 map <C-l> <Esc>:bnext<CR>
