@@ -94,6 +94,9 @@ let g:javascript_plugin_flow = 1
 
 " ALE
 let g:ale_vue_vls_use_global = 1
+let g:ale_linters = {
+\ 'python': ['flake8', 'pyls']
+\}
 let g:ale_fixers = {
 \ 'javascript': ['standard'],
 \ 'python': ['autopep8', 'isort']
