@@ -125,6 +125,7 @@ set number relativenumber
 set cursorline
 set ignorecase smartcase
 set showmatch
+set inccommand=split
 set incsearch
 set hlsearch
 set hidden
