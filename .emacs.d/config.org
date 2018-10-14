@@ -162,6 +162,11 @@
    #+BEGIN_SRC emacs-lisp
      (setq evil-emacs-state-modes (delq 'ibuffer-mode evil-emacs-state-modes))  
    #+END_SRC
+* Sudo edit
+  #+BEGIN_SRC emacs-lisp
+    (use-package sudo-edit
+      :ensure t)
+  #+END_SRC
 * Color hex codes
 ** rainbow
    #+BEGIN_SRC emacs-lisp
