@@ -48,6 +48,10 @@
    #+BEGIN_SRC emacs-lisp
    (setq inhibit-startup-message t)
    #+END_SRC
+** follow symbolic links
+   #+BEGIN_SRC emacs-lisp
+     (setq vc-follow-symlinks t)
+   #+END_SRC
 * Packages
 ** Dracula theme
    #+BEGIN_SRC emacs-lisp
@@ -80,9 +84,47 @@
    #+END_SRC
 ** evil-leader
    #+BEGIN_SRC emacs-lisp
-   (use-package evil-leader
-                :ensure t
-                :init
-                (global-evil-leader-mode t)
-                (evil-leader/set-leader ","))
+     (use-package evil-leader
+		  :ensure t
+		  :init
+		  (global-evil-leader-mode t)
+		  (evil-leader/set-leader ","))
+   #+END_SRC
+** org-bullets
+   #+BEGIN_SRC emacs-lisp
+     (use-package org-bullets
+       :ensure t
+       :config
+       (add-hook 'org-mode-hook (lambda () (org-bullets-mode))))
+   #+END_SRC
+* IDO
+** enable IDO
+   #+BEGIN_SRC emacs-lisp
+     (setq ido-enable-flex-matching nil)
+     (setq ido-create-new-buffer 'always)
+     (setq ido-everywhere t)
+     (ido-mode t)
+   #+END_SRC
+** ido-vertical
+   #+BEGIN_SRC emacs-lisp
+     (use-package ido-vertical-mode
+       :ensure t
+       :init
+       (ido-vertical-mode t))
+   #+END_SRC
+** smex
+   #+BEGIN_SRC emacs-lisp
+     (use-package smex
+       :ensure t
+       :init (smex-initialize)
+       :bind ("M-x" . smex))
+   #+END_SRC
+** switch buffers
+   #+BEGIN_SRC emacs-lisp
+     (global-set-key (kbd "C-x C-b") 'ido-switch-buffer)
+   #+END_SRC
+* Buffers
+** enable ibuffer
+   #+BEGIN_SRC emacs-lisp
+     (global-set-key (kbd "C-x b") 'ibuffer)
    #+END_SRC

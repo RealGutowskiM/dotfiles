@@ -9,6 +9,9 @@
   (package-refresh-contents)
   (package-install 'use-package))
 
+;; Follow symbolic links
+(setq vc-follow-symlinks t)
+
 ;; Load configuration from pretty org file
 (org-babel-load-file (expand-file-name "~/.emacs.d/config.org"))
 
