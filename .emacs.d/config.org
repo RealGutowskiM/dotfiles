@@ -1,0 +1,88 @@
+* Visual Tweaks
+** disable gui noise
+  #+BEGIN_SRC emacs-lisp
+  (tool-bar-mode -1)
+  (menu-bar-mode -1)
+  (scroll-bar-mode -1)
+  #+END_SRC
+** transparency for terminal emacs
+  #+BEGIN_SRC emacs-lisp
+  (defun on-after-init ()
+    (unless (display-graphic-p (selected-frame))
+    (set-face-background 'default "unspecified-bg" (selected-frame))))
+  (add-hook 'window-setup-hook 'on-after-init)
+  #+END_SRC 
+** relative line numbers
+  #+BEGIN_SRC emacs-lisp
+  (global-display-line-numbers-mode t)
+  (setq display-line-numbers-type 'relative)
+  #+END_SRC
+** scroll margin
+  #+BEGIN_SRC emacs-lisp
+  (setq scroll-margin 10
+        scroll-conservatively 100)
+  #+END_SRC
+** line highlighting for GUI Emacs
+  #+BEGIN_SRC emacs-lisp
+  (when window-system (global-hl-line-mode t))
+  #+END_SRC
+** prettyfy symbols
+#+BEGIN_SRC emacs-lisp
+(global-prettify-symbols-mode t)
+#+END_SRC
+* Misc fixes
+** disable bell noise
+  #+BEGIN_SRC emacs-lisp
+  (setq ring-bell-function 'ignore)
+  #+END_SRC
+** disable autosave/backups
+  #+BEGIN_SRC emacs-lisp
+  (setq make-backup-file nil)
+  (setq auto-save-default nil)
+  #+END_SRC
+** substitute yes-or-no prompts with shorter y-or-n
+#+BEGIN_SRC emacs-lisp
+(defalias 'yes-or-no-p 'y-or-n-p)
+#+END_SRC
+** disable startup message
+   #+BEGIN_SRC emacs-lisp
+   (setq inhibit-startup-message t)
+   #+END_SRC
+* Packages
+** Dracula theme
+   #+BEGIN_SRC emacs-lisp
+   (use-package dracula-theme
+                :ensure t
+                :demand
+                :config
+                (load-theme 'dracula t))
+   #+END_SRC
+** which-key
+   #+BEGIN_SRC emacs-lisp
+   (use-package which-key
+                :ensure t
+                :init
+                (which-key-mode))
+   #+END_SRC
+** beacon
+   #+BEGIN_SRC emacs-lisp
+   (use-package beacon
+                :ensure t
+                :init
+                (beacon-mode t))
+   #+END_SRC
+** evil
+   #+BEGIN_SRC emacs-lisp
+   (use-package evil
+                :ensure t
+                :init
+                (evil-mode t))
+   #+END_SRC
+** evil-leader
+   #+BEGIN_SRC emacs-lisp
+   (use-package evil-leader
+                :ensure t
+                :init
+                (global-evil-leader-mode t)
+                (evil-leader/set-leader ","))
+   #+END_SRC
