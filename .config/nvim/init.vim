@@ -67,7 +67,7 @@ let g:ctrlp_show_hidden = 1
 "autocmd FileType netrw setl bufhidden=wipe
 
 " airline
-"let g:airline_theme = 'wombat'
+let g:airline_theme = 'dracula'
 let g:airline#extensions#branch#enabled = 1 " needs fugitive to work
 let g:airline#extensions#tabline#enabled = 1 
 let g:airline_section_warning = '' 
