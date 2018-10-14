@@ -128,6 +128,7 @@ alias pks="packer -S"
 alias pksn="packer -S --noconfirm --noedit"
 alias pksyu="packer -Syu  --noconfirm --noedit"
 alias vim="nvim"
+alias emacs="emacs -nw"
 
 #neofetch
 echo "Hi, how are you?"
