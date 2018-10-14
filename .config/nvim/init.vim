@@ -22,6 +22,9 @@ call plug#end()
 
 filetype plugin indent on
 
+" dracula
+let g:dracula_colorterm = 0
+
 " neosnippet
 imap <C-space> <Plug>(neosnippet_expand_or_jump)
 smap <C-space> <Plug>(neosnippet_expand_or_jump)
