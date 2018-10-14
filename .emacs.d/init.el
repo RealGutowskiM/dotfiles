@@ -22,7 +22,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (beacon which-key use-package evil-surround evil-leader dracula-theme))))
+    (rainbow-mode beacon which-key use-package evil-surround evil-leader dracula-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
