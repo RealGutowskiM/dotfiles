@@ -35,6 +35,10 @@
   #+BEGIN_SRC emacs-lisp
   (setq ring-bell-function 'ignore)
   #+END_SRC
+** disable size indication mode
+   #+BEGIN_SRC emacs-lisp
+     (size-indication-mode -1)
+   #+END_SRC
 ** disable autosave/backups
   #+BEGIN_SRC emacs-lisp
   (setq make-backup-file nil)
@@ -107,10 +111,14 @@
    #+END_SRC
 * evil
    #+BEGIN_SRC emacs-lisp
-   (use-package evil
-                :ensure t
-                :init
-                (evil-mode t))
+     (use-package evil
+		  :ensure t
+		  :init
+		  (evil-mode t)
+		  :config
+		  (setq evil-normal-state-tag "Normal")
+		  (setq evil-insert-state-tag "Insert")
+		  (setq evil-visual-state-tag "Visual"))
    #+END_SRC
 * evil-leader
    #+BEGIN_SRC emacs-lisp
@@ -170,9 +178,10 @@
 * Colors
 ** rainbow
    #+BEGIN_SRC emacs-lisp
-     (use-package rainbow-mode
-       :ensure t
-       :init (rainbow-mode t))
+	 (use-package rainbow-mode
+	   :ensure t
+	   :config
+	   (add-hook 'prog-mode-hook 'rainbow-mode))
    #+END_SRC
 ** rainbow-delimiters
    #+BEGIN_SRC emacs-lisp
@@ -202,12 +211,13 @@
     (setq dashboard-banner-logo-title "Hi, how are you?"))
 #+END_SRC
 * Powerline
-** powerline
+** spaceline
    #+BEGIN_SRC emacs-lisp
-     (use-package powerline
+     (use-package spaceline
        :ensure t
-       :init
-       (powerline-default-theme))
+       :config
+       (setq spaceline-highlight-face-func 'spaceline-highlight-face-evil-state)
+       (spaceline-spacemacs-theme))
    #+END_SRC
 ** diminish
    #+BEGIN_SRC emacs-lisp
