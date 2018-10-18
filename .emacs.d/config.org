@@ -67,10 +67,14 @@
 ** electric pairs
    #+BEGIN_SRC emacs-lisp
      (setq electric-pair-pairs '(
-				 (?\( . ?\))
-				 (?\[ . ?\])
-				 ))
+                                 (?\( . ?\))
+                                 (?\[ . ?\])
+                                 ))
      (electric-pair-mode t)
+   #+END_SRC
+** Use spaces instead of tabs
+   #+BEGIN_SRC emacs-lisp
+     (setq-default indent-tabs-mode nil)
    #+END_SRC
 * Config
 ** edit
@@ -112,21 +116,21 @@
 * evil
    #+BEGIN_SRC emacs-lisp
      (use-package evil
-		  :ensure t
-		  :init
-		  (evil-mode t)
-		  :config
-		  (setq evil-normal-state-tag "Normal")
-		  (setq evil-insert-state-tag "Insert")
-		  (setq evil-visual-state-tag "Visual"))
+                  :ensure t
+                  :init
+                  (evil-mode t)
+                  :config
+                  (setq evil-normal-state-tag "Normal")
+                  (setq evil-insert-state-tag "Insert")
+                  (setq evil-visual-state-tag "Visual"))
    #+END_SRC
 * evil-leader
    #+BEGIN_SRC emacs-lisp
      (use-package evil-leader
-		  :ensure t
-		  :init
-		  (global-evil-leader-mode t)
-		  (evil-leader/set-leader ","))
+                  :ensure t
+                  :init
+                  (global-evil-leader-mode t)
+                  (evil-leader/set-leader ","))
    #+END_SRC
 * org-bullets
    #+BEGIN_SRC emacs-lisp
@@ -178,10 +182,10 @@
 * Colors
 ** rainbow
    #+BEGIN_SRC emacs-lisp
-	 (use-package rainbow-mode
-	   :ensure t
-	   :config
-	   (add-hook 'prog-mode-hook 'rainbow-mode))
+         (use-package rainbow-mode
+           :ensure t
+           :config
+           (add-hook 'prog-mode-hook 'rainbow-mode))
    #+END_SRC
 ** rainbow-delimiters
    #+BEGIN_SRC emacs-lisp
@@ -199,7 +203,7 @@
 ** ELisp code snippet
    #+BEGIN_SRC emacs-lisp
      (add-to-list 'org-structure-template-alist
-		  '("el" "#+BEGIN_SRC emacs-lisp\n?\n#+END_SRC"))
+                  '("el" "#+BEGIN_SRC emacs-lisp\n?\n#+END_SRC"))
    #+END_SRC
 * Dashboard
 #+BEGIN_SRC emacs-lisp
@@ -219,19 +223,19 @@
 ** modeline
    #+BEGIN_SRC emacs-lisp
      (setq-default mode-line-format
-		   '("%e"
-		     " "
-		     mode-line-buffer-identification
-		     ":%l:%c: %p"
-		     (vc-mode (
-			       "    "
-			       (:eval (all-the-icons-faicon "code-fork"
-						  :v-adjust 0))
-			       vc-mode))
-		     "    "
-		     mode-line-modes
-		     mode-line-misc-info
-		     mode-line-end-spaces))
+                   '("%e"
+                     " "
+                     mode-line-buffer-identification
+                     ":%l:%c: %p"
+                     (vc-mode (
+                               "    "
+                               (:eval (all-the-icons-faicon "code-fork"
+                                                  :v-adjust 0))
+                               vc-mode))
+                     "    "
+                     mode-line-modes
+                     mode-line-misc-info
+                     mode-line-end-spaces))
    #+END_SRC
 ** diminish
    #+BEGIN_SRC emacs-lisp
@@ -253,4 +257,3 @@
        :init
        (add-hook 'after-init-hook 'global-company-mode))
    #+END_SRC
-
