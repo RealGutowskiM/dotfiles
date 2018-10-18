@@ -76,6 +76,11 @@
    #+BEGIN_SRC emacs-lisp
      (setq-default indent-tabs-mode nil)
    #+END_SRC
+** Highlight tabs
+   #+BEGIN_SRC emacs-lisp
+     (setq whitespace-style '(tab-mark))
+     (global-whitespace-mode 1)
+   #+END_SRC
 * Config
 ** edit
    #+BEGIN_SRC emacs-lisp
@@ -114,6 +119,7 @@
                 (beacon-mode t))
    #+END_SRC
 * evil
+** install
    #+BEGIN_SRC emacs-lisp
      (use-package evil
                   :ensure t
@@ -123,6 +129,13 @@
                   (setq evil-normal-state-tag "Normal")
                   (setq evil-insert-state-tag "Insert")
                   (setq evil-visual-state-tag "Visual"))
+   #+END_SRC
+** Change cursor depending on the state
+   #+BEGIN_SRC emacs-lisp
+     (setq evil-mode-line-format nil
+           evil-normal-state-cursor '(box "#bd93f9")
+           evil-insert-state-cursor '(bar "#50fa7b")
+           evil-visual-state-cursor '(box "#f1fa8c"))
    #+END_SRC
 * evil-leader
    #+BEGIN_SRC emacs-lisp
@@ -205,13 +218,24 @@
      (add-to-list 'org-structure-template-alist
                   '("el" "#+BEGIN_SRC emacs-lisp\n?\n#+END_SRC"))
    #+END_SRC
+* Projectile
+** install and bind
+   #+BEGIN_SRC emacs-lisp
+     (use-package projectile
+       :ensure t
+       :config
+       (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+       (evil-leader/set-key "p" 'projectile-command-map)
+       (projectile-mode 1))
+   #+END_SRC
 * Dashboard
 #+BEGIN_SRC emacs-lisp
   (use-package dashboard
     :ensure t
     :config
     (dashboard-setup-startup-hook)
-    (setq dashboard-items '((recents . 10)))
+    (setq dashboard-items '((recents . 10)
+                            (projects . 5)))
     (setq dashboard-banner-logo-title "Hi, how are you?"))
 #+END_SRC
 * Modeline
