@@ -703,8 +703,8 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
-
-
+# Disable caps lock and map it to ctrl
+exec_always --no-startup-id setxkbmap -option ctrl:nocaps
 
 #####################################################################################################################
 #################                          compton of i3wm                                          #################
