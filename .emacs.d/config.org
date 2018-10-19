@@ -12,11 +12,15 @@
     (set-face-background 'default "unspecified-bg" (selected-frame))))
   (add-hook 'window-setup-hook 'on-after-init)
   #+END_SRC 
-** relative line numbers
+** relative line numbers (disable)
   #+BEGIN_SRC emacs-lisp
-  (global-display-line-numbers-mode t)
-  (setq display-line-numbers-type 'relative)
+    ;; (global-display-line-numbers-mode t)
+    ;; (setq display-line-numbers-type 'relative)
   #+END_SRC
+** window margins
+   #+BEGIN_SRC emacs-lisp
+     (setq-default left-margin-width 2 right-margin-width 2)
+   #+END_SRC
 ** scroll margin
   #+BEGIN_SRC emacs-lisp
   (setq scroll-margin 10

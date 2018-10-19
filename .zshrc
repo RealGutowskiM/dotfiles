@@ -108,6 +108,8 @@ alias egrep='egrep --color=auto'
 
 alias fgrep='fgrep --color=auto'
 alias gl='git log --oneline --all --graph --decorate'
+alias glv='git log --all --graph --decorate'
+alias gs='git status'
 alias evc='vim ~/.dotfiles/.config/nvim/init.vim'
 alias ezrc='vim ~/.dotfiles/.zshrc'
 
