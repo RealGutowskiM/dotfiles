@@ -22,7 +22,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (web-mode tide flycheck js2-mode yasnippet-snippets yasnippet evil-magit magit projectile all-the-icons diminish company dashboard rainbow-delimiters sudo-edit rainbow-mode beacon which-key use-package evil-surround evil-leader dracula-theme))))
+    (company-jedi web-mode tide flycheck js2-mode yasnippet-snippets yasnippet evil-magit magit projectile all-the-icons diminish company dashboard rainbow-delimiters sudo-edit rainbow-mode beacon which-key use-package evil-surround evil-leader dracula-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
