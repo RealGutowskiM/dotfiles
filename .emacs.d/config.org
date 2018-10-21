@@ -298,3 +298,47 @@
        :init
        (add-hook 'after-init-hook 'global-company-mode))
    #+END_SRC
+* Snippets
+** yasnippets
+   #+BEGIN_SRC emacs-lisp
+     (use-package yasnippet
+       :ensure t
+       :config
+       (use-package yasnippet-snippets
+         :ensure t)
+       (yas-reload-all)
+       (yas-global-mode t))
+   #+END_SRC
+* FlyCheck
+** install
+   #+BEGIN_SRC emacs-lisp
+     (use-package flycheck
+       :ensure t
+       :init (global-flycheck-mode))
+   #+END_SRC
+* JavaScript
+** js2-mode
+   #+BEGIN_SRC emacs-lisp
+     (use-package js2-mode
+       :ensure t
+       :mode "\\.js\\'"
+       :interpreter "node")
+   #+END_SRC
+* TypeScript
+** tide
+   #+BEGIN_SRC emacs-lisp
+     (defun setup-tide-mode ()
+       (interactive)
+       (tide-setup)
+       (flycheck-mode +1)
+       (setq flycheck-check-syntax-automatically '(save mode-enabled))
+       (tide-hl-identifier-mode +1)
+       (company-mode +1))
+
+     (use-package tide
+       :ensure t
+       :config
+       (progn
+         (add-hook 'typescript-mode-hook #'setup-tide-mode)
+         (add-hook 'js2-mode-hook #'setup-tide-mode)))
+   #+END_SRC
