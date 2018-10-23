@@ -216,6 +216,18 @@
    #+BEGIN_SRC emacs-lisp
      (global-set-key (kbd "C-u") 'evil-scroll-up)
    #+END_SRC
+* Shell
+** set default shell
+   #+BEGIN_SRC emacs-lisp
+     (defvar my-default-term-shell "/bin/zsh")
+     (defadvice ansi-term (before force-bash)
+       (interactive (list my-default-term-shell)))
+     (ad-activate 'ansi-term)
+   #+END_SRC
+** keybinding for terminal
+   #+BEGIN_SRC emacs-lisp
+     (evil-leader/set-key "t" 'ansi-term)
+   #+END_SRC
 * Org snippets
 ** ELisp code snippet
    #+BEGIN_SRC emacs-lisp
