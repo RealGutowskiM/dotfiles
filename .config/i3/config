@@ -433,10 +433,11 @@ exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 #not workspace related
 
 # terminal
-bindsym $mod+Return exec --no-startup-id termite;focus
+bindsym $mod+Return exec --no-startup-id urxvt;focus
 
 for_window [class="Thunar"] focus
-bindsym $mod+Shift+Return exec --no-startup-id thunar;focus
+bindsym $mod+Shift+Return exec --no-startup-id urxvt -e ranger;focus
+bindsym $mod+shift+e exec --no-startup-id emacs;focus
 
 #####################################################################################################################
 #################                          screenshots                                              #################
