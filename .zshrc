@@ -78,6 +78,8 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
+export EDITOR='emacs'
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -116,8 +118,6 @@ alias ezrc='vim ~/.dotfiles/.zshrc'
 #readable output
 alias df='df -h'
 
-alias merge="xrdb -merge ~/.Xresources"
-
 # Aliases for software managment
 # pacman or pm
 alias pmsyu="sudo pacman -Syu --color=auto"
@@ -130,7 +130,6 @@ alias pks="packer -S"
 alias pksn="packer -S --noconfirm --noedit"
 alias pksyu="packer -Syu  --noconfirm --noedit"
 alias vim="nvim"
-alias emacs="emacs -nw"
 
 #neofetch
 echo "Hi, how are you?"
