@@ -337,6 +337,11 @@
        web-mode-enable-auto-pairing t
        web-mode-enable-auto-indentation t))
   #+END_SRC
+* JSON
+  #+BEGIN_SRC emacs-lisp
+    (use-package json-mode
+      :ensure t)
+  #+END_SRC
 * FlyCheck
 ** install
    #+BEGIN_SRC emacs-lisp
@@ -367,6 +372,7 @@
        :ensure t
        :config
        (progn
+         (setq company-tooltip-align-annotations t)
          (add-hook 'typescript-mode-hook #'setup-tide-mode)
          (add-hook 'js2-mode-hook #'setup-tide-mode)))
    #+END_SRC
