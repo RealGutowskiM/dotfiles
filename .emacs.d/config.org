@@ -85,6 +85,11 @@
      (setq whitespace-style '(tab-mark))
      (global-whitespace-mode 1)
    #+END_SRC
+** set default browser
+   #+BEGIN_SRC emacs-lisp
+     (setq browse-url-browser-function 'browse-url-generic
+           browse-url-generic-program "qutebrowser")
+   #+END_SRC
 * Config
 ** edit
    #+BEGIN_SRC emacs-lisp
@@ -159,7 +164,7 @@
 * IDO
 ** enable IDO
    #+BEGIN_SRC emacs-lisp
-     (setq ido-enable-flex-matching nil)
+     (setq ido-enable-flex-matching t)
      (setq ido-create-new-buffer 'always)
      (setq ido-everywhere t)
      (ido-mode t)
@@ -191,6 +196,12 @@
    #+BEGIN_SRC emacs-lisp
      (setq evil-emacs-state-modes (delq 'ibuffer-mode evil-emacs-state-modes))  
    #+END_SRC
+** buffer shortcuts
+  #+BEGIN_SRC emacs-lisp
+    (evil-leader/set-key "b l" 'evil-next-buffer)
+    (evil-leader/set-key "b h" 'evil-prev-buffer)
+    (evil-leader/set-key "b b" 'ido-switch-buffer)
+  #+END_SRC 
 * Sudo edit
   #+BEGIN_SRC emacs-lisp
     (use-package sudo-edit
@@ -356,7 +367,9 @@
      (use-package js2-mode
        :ensure t
        :mode "\\.js\\'"
-       :interpreter "node")
+       :interpreter "node"
+       :config
+       (setq-default js2-basic-offset 2))
    #+END_SRC
 * TypeScript
 ** tide
@@ -374,6 +387,8 @@
        :config
        (progn
          (setq company-tooltip-align-annotations t)
+         (setq tide-format-options '(:indentSize 2 :tabSize 2))
+         (setq-default typescript-indent-level 2)
          (add-hook 'typescript-mode-hook #'setup-tide-mode)
          (add-hook 'js2-mode-hook #'setup-tide-mode)))
    #+END_SRC
