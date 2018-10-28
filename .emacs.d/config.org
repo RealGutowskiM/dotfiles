@@ -269,8 +269,9 @@
                      ":%l:%c: %p"
                      (vc-mode (
                                "    "
-                               (:eval (all-the-icons-faicon "code-fork"
-                                                  :v-adjust 0))
+                               (:eval (if (display-graphic-p)
+                                          (all-the-icons-faicon "code-fork"
+                                                  :v-adjust 0)))
                                vc-mode))
                      "    "
                      mode-line-modes
