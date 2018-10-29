@@ -174,7 +174,9 @@
      (use-package ido-vertical-mode
        :ensure t
        :init
-       (ido-vertical-mode t))
+       (ido-vertical-mode t)
+       :config
+       (setq ido-vertical-define-keys 'C-n-and-C-p-only))
    #+END_SRC
 ** smex
    #+BEGIN_SRC emacs-lisp
