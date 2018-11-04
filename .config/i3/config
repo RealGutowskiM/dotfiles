@@ -438,6 +438,7 @@ bindsym $mod+Return exec --no-startup-id urxvt;focus
 for_window [class="Thunar"] focus
 bindsym $mod+Shift+Return exec --no-startup-id urxvt -e ranger;focus
 bindsym $mod+shift+e exec --no-startup-id emacs;focus
+bindsym $mod+q exec --no-startup-id qutebrowser;focus
 
 #####################################################################################################################
 #################                          screenshots                                              #################
