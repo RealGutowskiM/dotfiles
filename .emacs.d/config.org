@@ -258,6 +258,7 @@
        (projectile-mode 1))
    #+END_SRC
 * Dashboard
+** install and configure
 #+BEGIN_SRC emacs-lisp
   (use-package dashboard
     :ensure t
@@ -267,6 +268,10 @@
                             (projects . 5)))
     (setq dashboard-banner-logo-title "Hi, how are you?"))
 #+END_SRC
+** Make dashboard the default buffer when using daemon
+   #+BEGIN_SRC emacs-lisp
+   (setq initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
+   #+END_SRC
 * Modeline
 ** all-the-icons
    #+BEGIN_SRC emacs-lisp
