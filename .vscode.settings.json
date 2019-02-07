@@ -1,0 +1,62 @@
+{
+    "workbench.colorTheme": "Dracula",
+    "workbench.settings.editor": "json",
+    "workbench.activityBar.visible": false,
+    "editor.minimap.enabled": false,
+    "editor.fontFamily": "'M+ 1m', Consolas, 'Courier New', monospace",
+    "vim.easymotion": true,
+    "vim.useSystemClipboard": true,
+    "vim.changeWordIncludesWhitespace": true,
+    "vim.easymotionMarkerHeight": 18,
+    "vim.hlsearch": true,
+    "vim.leader": ",",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<leader>",
+                "f"
+            ],
+            "commands": [
+                "editor.action.formatDocument"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "w"
+            ],
+            "commands": [
+                "workbench.action.files.save"
+            ]
+        },
+        {
+            "before": [
+                "<space>"
+            ],
+            "after": [
+                "<leader>",
+                "<leader>",
+                "s",
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "e"
+            ],
+            "commands": [
+                "workbench.action.toggleSidebarVisibility"
+            ]
+        }
+    ],
+    "advancedNewFile.exclude": {
+        "node_modules": true
+    },
+    "advancedNewFile.showInformationMessages": true,
+    "advancedNewFile.convenienceOptions": [
+        "last",
+        "current",
+        "root"
+    ],
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe"
+}
