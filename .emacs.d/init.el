@@ -155,8 +155,28 @@
   :init
   (projectile-mode t)
   :config
-  (setq projectile-globally-ignored-directories '("node_modules" ".git"))
+  (setq projectile-globally-ignored-directories '("node_modules" ".git")
+        projectile-enable-caching t)
   (evil-leader/set-key "p" 'projectile-command-map))
+
+;; PROGRAMMING LANGUAGES
+
+;; Check syntax onf the fly
+(use-package flycheck
+  :ensure t
+  :diminish (flycheck-mode)
+  :init (global-flycheck-mode))
+
+;; Typescript
+(use-package typescript-mode
+  :ensure t
+  :config
+  (setq typescript-indent-level 2))
+(use-package tide
+  :ensure t
+  :hook ((typescript-mode . tide-setup)
+         (typescript-mode . tide-hl-identifier-mode)
+         (before-save . tide-format-before-save)))
 
 ;; Custom variables
 (custom-set-variables
@@ -167,7 +187,7 @@
  '(evil-want-C-u-scroll t)
  '(package-selected-packages
    (quote
-    (projectile diminish company ido-vertical-mode which-key evil-leader dracula-theme use-package))))
+    (tide flycheck typescript-mode projectile diminish company ido-vertical-mode which-key evil-leader dracula-theme use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
