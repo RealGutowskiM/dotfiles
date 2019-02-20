@@ -1,9 +1,24 @@
 {
-    "workbench.colorTheme": "Dracula",
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "none",
+    "editor.renderIndentGuides": false,
+    "editor.overviewRulerBorder": false,
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.folding": false,
+    "editor.occurrencesHighlight": false,
+    "editor.fontFamily": "'M+ 1m', Consolas, 'Courier New', monospace",
+    "editor.fontSize": 14,
+    "explorer.openEditors.visible": 0,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.settings.editor": "json",
     "workbench.activityBar.visible": false,
-    "editor.minimap.enabled": false,
-    "editor.fontFamily": "'M+ 1m', Consolas, 'Courier New', monospace",
+    "workbench.editor.tabCloseButton": "off",
+    "workbench.startupEditor": "none",
+    "nightswitch.sunrise": "06:00",
+    "nightswitch.sunset": "18:00",
+    "nightswitch.themeDay": "oolory",
+    "nightswitch.themeNight": "oolory night",
+    "window.menuBarVisibility": "toggle",
     "vim.easymotion": true,
     "vim.useSystemClipboard": true,
     "vim.changeWordIncludesWhitespace": true,
@@ -22,6 +37,22 @@
         },
         {
             "before": [
+                "<C-h>"
+            ],
+            "commands": [
+                "workbench.action.previousEditor"
+            ]
+        },
+        {
+            "before": [
+                "<C-l>"
+            ],
+            "commands": [
+                "workbench.action.nextEditor"
+            ]
+        },
+        {
+            "before": [
                 "<leader>",
                 "w"
             ],
@@ -36,7 +67,7 @@
             "after": [
                 "<leader>",
                 "<leader>",
-                "s",
+                "s"
             ]
         },
         {
@@ -58,5 +89,10 @@
         "current",
         "root"
     ],
-    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe"
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
+    "terminal.integrated.shellArgs.windows": [
+        "/k",
+        "%userprofile%\\cmdrc.bat"
+    ],
+    "workbench.colorTheme": "oolory night"
 }
