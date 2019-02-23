@@ -8,17 +8,22 @@
     "editor.occurrencesHighlight": false,
     "editor.fontFamily": "'M+ 1m', Consolas, 'Courier New', monospace",
     "editor.fontSize": 14,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true,
+        "source.organizeImports": true
+    },
     "explorer.openEditors.visible": 0,
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.settings.editor": "json",
     "workbench.activityBar.visible": false,
     "workbench.editor.tabCloseButton": "off",
     "workbench.startupEditor": "none",
+    "window.menuBarVisibility": "toggle",
     "nightswitch.sunrise": "06:00",
     "nightswitch.sunset": "18:00",
     "nightswitch.themeDay": "oolory",
     "nightswitch.themeNight": "oolory night",
-    "window.menuBarVisibility": "toggle",
+    "scrolloff.scrolloff": 10,
     "vim.easymotion": true,
     "vim.useSystemClipboard": true,
     "vim.changeWordIncludesWhitespace": true,
@@ -94,5 +99,5 @@
         "/k",
         "%userprofile%\\cmdrc.bat"
     ],
-    "workbench.colorTheme": "oolory night"
+    "workbench.colorTheme": "oolory"
 }
