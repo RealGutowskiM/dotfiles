@@ -18,7 +18,10 @@
     "workbench.activityBar.visible": false,
     "workbench.editor.tabCloseButton": "off",
     "workbench.startupEditor": "none",
+    "workbench.list.keyboardNavigation": "simple",
     "window.menuBarVisibility": "toggle",
+    "tslint.jsEnable": true,
+    "tslint.alwaysShowRuleFailuresAsWarnings": false,
     "nightswitch.sunrise": "06:00",
     "nightswitch.sunset": "18:00",
     "nightswitch.themeDay": "oolory",
@@ -84,15 +87,6 @@
                 "workbench.action.toggleSidebarVisibility"
             ]
         }
-    ],
-    "advancedNewFile.exclude": {
-        "node_modules": true
-    },
-    "advancedNewFile.showInformationMessages": true,
-    "advancedNewFile.convenienceOptions": [
-        "last",
-        "current",
-        "root"
     ],
     "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
     "terminal.integrated.shellArgs.windows": [
