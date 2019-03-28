@@ -7,7 +7,7 @@
     "editor.folding": false,
     "editor.occurrencesHighlight": false,
     "editor.fontFamily": "'M+ 1m', Consolas, 'Courier New', monospace",
-    "editor.fontSize": 14,
+    "editor.fontSize": 16,
     "editor.codeActionsOnSave": {
         "source.fixAll": true,
         "source.organizeImports": true
@@ -20,8 +20,8 @@
     "workbench.startupEditor": "none",
     "workbench.list.keyboardNavigation": "simple",
     "window.menuBarVisibility": "toggle",
-    "tslint.jsEnable": true,
-    "tslint.alwaysShowRuleFailuresAsWarnings": false,
+    "prettier.tabWidth": 4,
+    "prettier.trailingComma": "es5",
     "nightswitch.sunrise": "06:00",
     "nightswitch.sunset": "18:00",
     "nightswitch.themeDay": "oolory",
@@ -35,63 +35,32 @@
     "vim.leader": ",",
     "vim.normalModeKeyBindingsNonRecursive": [
         {
-            "before": [
-                "<leader>",
-                "f"
-            ],
-            "commands": [
-                "editor.action.formatDocument"
-            ]
+            "before": ["<leader>", "f"],
+            "commands": ["editor.action.formatDocument"]
         },
         {
-            "before": [
-                "<C-h>"
-            ],
-            "commands": [
-                "workbench.action.previousEditor"
-            ]
+            "before": ["<C-h>"],
+            "commands": ["workbench.action.previousEditor"]
         },
         {
-            "before": [
-                "<C-l>"
-            ],
-            "commands": [
-                "workbench.action.nextEditor"
-            ]
+            "before": ["<C-l>"],
+            "commands": ["workbench.action.nextEditor"]
         },
         {
-            "before": [
-                "<leader>",
-                "w"
-            ],
-            "commands": [
-                "workbench.action.files.save"
-            ]
+            "before": ["<leader>", "w"],
+            "commands": ["workbench.action.files.save"]
         },
         {
-            "before": [
-                "<space>"
-            ],
-            "after": [
-                "<leader>",
-                "<leader>",
-                "s"
-            ]
+            "before": ["<space>"],
+            "after": ["<leader>", "<leader>", "s"]
         },
         {
-            "before": [
-                "<leader>",
-                "e"
-            ],
-            "commands": [
-                "workbench.action.toggleSidebarVisibility"
-            ]
+            "before": ["<leader>", "e"],
+            "commands": ["workbench.action.toggleSidebarVisibility"]
         }
     ],
     "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
-    "terminal.integrated.shellArgs.windows": [
-        "/k",
-        "%userprofile%\\cmdrc.bat"
-    ],
-    "workbench.colorTheme": "oolory"
+    "terminal.integrated.shellArgs.windows": ["/k", "%userprofile%\\cmdrc.bat"],
+    "workbench.colorTheme": "oolory",
+    "javascript.updateImportsOnFileMove.enabled": "never"
 }
