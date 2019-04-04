@@ -22,6 +22,7 @@
     "workbench.editor.tabCloseButton": "off",
     "workbench.startupEditor": "none",
     "workbench.list.keyboardNavigation": "simple",
+    "workbench.list.automaticKeyboardNavigation": false,
     "window.menuBarVisibility": "toggle",
     "prettier.tabWidth": 4,
     "prettier.trailingComma": "es5",
