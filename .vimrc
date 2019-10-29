@@ -51,6 +51,7 @@ nmap <silent> <leader>a <Plug>(coc-codeaction)
 "xmap <leader>f <Plug>(coc-format-selected)
 "nmap <leader>f <Plug>(coc-format-selected)
 
+colorscheme oolory
 set nobackup
 set noswapfile
 set noruler
@@ -64,9 +65,8 @@ set belloff=all
 set signcolumn=yes
 set updatetime=300
 set hidden
-set scrolloff=10
 set termguicolors
-set t_Co=256
+set scrolloff=10
 set laststatus=2
 set cmdheight=2
 set shortmess=aFc
