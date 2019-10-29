@@ -99,3 +99,16 @@ hi Underlined guifg=NONE guibg=#0d1e24 guisp=#0d1e24 gui=underline ctermfg=NONE 
 hi DiffAdd guifg=NONE guibg=#b6f5cf guisp=#b6f5cf gui=NONE ctermfg=NONE ctermbg=158 cterm=NONE
 hi TabLine guifg=NONE guibg=NONE guisp=NONE gui=bold ctermfg=NONE ctermbg=NONE cterm=bold
 hi cursorim guifg=#ffddff guibg=#446091 guisp=#446091 gui=NONE ctermfg=225 ctermbg=67 cterm=NONE
+"hi NERDTreeDir guifg=#004dff guibg=NONE guisp=NONE gui=NONE ctermfg=27 ctermbg=NONE cterm=NONE
+"hi NERDTreeFile guifg=#004dff guibg=NONE guisp=NONE gui=NONE ctermfg=27 ctermbg=NONE cterm=NONE
+"hi NERDTreeUp guifg=#004dff guibg=NONE guisp=NONE gui=NONE ctermfg=27 ctermbg=NONE cterm=NONE
+"hi NERDTreeBookmark guifg=#004dff guibg=NONE guisp=NONE gui=NONE ctermfg=27 ctermbg=NONE cterm=NONE
+"hi NERDTreeBookmarkName guifg=#004dff guibg=NONE guisp=NONE gui=NONE ctermfg=27 ctermbg=NONE cterm=NONE
+"hi NERDTreeOpenable guifg=#004dff guibg=NONE guisp=NONE gui=NONE ctermfg=27 ctermbg=NONE cterm=NONE
+"hi NERDTreeClosable guifg=#004dff guibg=NONE guisp=NONE gui=NONE ctermfg=27 ctermbg=NONE cterm=NONE
+"hi NERDTreeIgnore guifg=#004dff guibg=NONE guisp=NONE gui=NONE ctermfg=27 ctermbg=NONE cterm=NONE
+"hi NERDTreeRO guifg=#004dff guibg=NONE guisp=NONE gui=NONE ctermfg=27 ctermbg=NONE cterm=NONE
+"hi NERDTreeFlags guifg=#004dff guibg=NONE guisp=NONE gui=NONE ctermfg=27 ctermbg=NONE cterm=NONE
+"hi NERDTreeLinkTarget guifg=#004dff guibg=NONE guisp=NONE gui=NONE ctermfg=27 ctermbg=NONE cterm=NONE
+"hi NERDTreeLinkFile guifg=#004dff guibg=NONE guisp=NONE gui=NONE ctermfg=27 ctermbg=NONE cterm=NONE
+"hi NERDTreeLinkDir guifg=#004dff guibg=NONE guisp=NONE gui=NONE ctermfg=27 ctermbg=NONE cterm=NONE
