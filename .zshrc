@@ -11,7 +11,7 @@ export PROMPT='%F{blue}╭%f %~
 # Aliases
 alias refresh-terminal-config='source ~/.zshrc'
 alias edit-terminal-config='vim  ~/.zshrc'
-alias ls='ls -alF'
+alias ls='ls -alhF'
 alias gs='git status'
 alias gls='git log --graph --all --oneline'
 alias glf='git log --graph --all'
