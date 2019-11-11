@@ -1,6 +1,6 @@
 " Settings
 set nocompatible
-set shortmess+=I
+set shortmess+=ac
 set scrolloff=10
 set nonumber
 set ruler
@@ -32,6 +32,7 @@ nnoremap <Esc><Esc> <Esc>:noh<cr>
 nnoremap <leader>w <Esc>:w<cr>
 nnoremap <leader>b <Esc>:buffers<CR>:buffer<space>
 nnoremap <leader>e <Esc>:Lexplore<CR>
+nnoremap <leader>f <Esc>:!yarn fix<CR>
 nnoremap <C-h> <Esc>:bprev<CR>
 nnoremap <C-l> <Esc>:bnext<CR>
 
