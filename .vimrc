@@ -1,7 +1,12 @@
 " Settings
+syntax on
+filetype plugin indent on
+
 set nocompatible
 set shortmess+=ac
 set scrolloff=10
+set sidescrolloff=10
+set signcolumn=yes
 set nonumber
 set ruler
 set backspace=indent,eol,start
@@ -13,7 +18,7 @@ set ignorecase smartcase
 set hlsearch
 set incsearch
 set shiftwidth=4
-set laststatus=3
+set laststatus=2
 set autoindent
 set autochdir
 set noswapfile
@@ -21,9 +26,10 @@ set nobackup
 set noundofile
 set path+=**
 set wildmenu
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*
+set wildignore+=**/tmp/**,*.so,*.swp,*.zip,**/node_modules/**
 set ttyfast
 set lazyredraw
+colorscheme oolory
 
 " Bindings
 let mapleader=","
