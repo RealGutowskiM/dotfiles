@@ -1,4 +1,16 @@
-" Settings
+" plugins
+packadd minpac
+call minpac#init()
+
+call minpac#add('k-takata/minpac', {'type': 'opt'})
+call minpac#add('tpope/vim-surround')
+call minpac#add('sheerun/vim-polyglot')
+call minpac#add('scrooloose/nerdtree')
+
+command! PackUpdate call minpac#update()
+command! PackClean call minpac#clean()
+
+" settings
 syntax on
 filetype plugin indent on
 
@@ -20,7 +32,7 @@ set incsearch
 set shiftwidth=4
 set laststatus=2
 set autoindent
-set autochdir
+set autoread
 set noswapfile
 set nobackup
 set noundofile
@@ -31,13 +43,13 @@ set ttyfast
 set lazyredraw
 colorscheme oolory
 
-" Bindings
+" bindings
 let mapleader=","
 
 nnoremap <Esc><Esc> <Esc>:noh<cr>
 nnoremap <leader>w <Esc>:w<cr>
 nnoremap <leader>b <Esc>:buffers<CR>:buffer<space>
-nnoremap <leader>e <Esc>:Lexplore<CR>
+nnoremap <leader>e <Esc>:NERDTreeToggle<CR>
 nnoremap <leader>f <Esc>:!yarn fix<CR>
 nnoremap <C-h> <Esc>:bprev<CR>
 nnoremap <C-l> <Esc>:bnext<CR>
