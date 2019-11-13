@@ -20,15 +20,17 @@ command! LoadVimrc source $MYVIMRC
 
 " functions
 function GitLogShortFunction()
-	silent execute "!clear && git log --graph --all --oneline"
+	silent execute "!clear &&
+				\ git log --graph --all --oneline --color=always
+				\ | less -r"
 	redraw!
 endfunction
 function GitLogFullFunction()
-	silent execute "!clear && git log --graph --all"
+	silent execute "!clear && git log --graph --all --color=always | less -r"
 	redraw!
 endfunction
 function GitDiffFunction()
-	silent execute "!clear && git diff"
+	silent execute "!clear && git diff --color=always | less -r"
 	redraw!
 endfunction
 
