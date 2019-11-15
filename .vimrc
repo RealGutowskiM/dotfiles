@@ -6,7 +6,7 @@ call minpac#add('k-takata/minpac', {'type': 'opt'})
 call minpac#add('tpope/vim-surround')
 call minpac#add('sheerun/vim-polyglot')
 call minpac#add('scrooloose/nerdtree')
-call minpac#add('neoclide/coc.nvim', {'do': 'call coc#util#install()'})
+call minpac#add('neoclide/coc.nvim', {'branch': 'release'})
 
 " commands
 command! PackUpdate call minpac#update()
@@ -15,6 +15,7 @@ command! GitStatus !clear && git status
 command! GitLogShort call GitLogShortFunction()
 command! GitLogFull call GitLogFullFunction()
 command! GitDiff call GitDiffFunction()
+command! -nargs=+ GitGrep call GitGrepFunction(<f-args>)
 command! ModifyVimrc edit $MYVIMRC
 command! LoadVimrc source $MYVIMRC
 
@@ -31,6 +32,14 @@ function GitLogFullFunction()
 endfunction
 function GitDiffFunction()
 	silent execute "!clear && git diff --color=always | less -r"
+	redraw!
+endfunction
+function GitGrepFunction(...)
+	let l:oldgrep = &grepprg
+	let &grepprg = "git grep -n"
+	silent execute "grep! ".join(a:000)
+	let &grepprg = l:oldgrep
+	copen
 	redraw!
 endfunction
 
@@ -78,6 +87,7 @@ nnoremap <leader>e <Esc>:NERDTreeToggle<CR>
 nnoremap <leader>f <Esc>:Format<CR>
 nnoremap <leader>gs <Esc>:GitStatus<CR>
 nnoremap <leader>gd <Esc>:GitDiff<CR>
+nnoremap <leader>gg <Esc>:GitGrep<space>
 nnoremap <leader>gls <Esc>:GitLogShort<CR>
 nnoremap <leader>glf <Esc>:GitLogFull<CR>
 nnoremap <C-h> <Esc>:bprev<CR>
@@ -93,3 +103,6 @@ let g:netrw_list_hide=netrw_gitignore#Hide()
 " completions
 " use `:Format` to format current buffer
 command! -nargs=0 Format :call CocAction('format')
+" Ctrl+Space for completion
+inoremap <silent><expr> <S-Space> coc#refresh()
+
