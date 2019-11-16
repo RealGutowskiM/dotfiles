@@ -5,6 +5,7 @@ call minpac#init()
 call minpac#add('k-takata/minpac', {'type': 'opt'})
 call minpac#add('tpope/vim-surround')
 call minpac#add('sheerun/vim-polyglot')
+call minpac#add('mhinz/vim-signify')
 call minpac#add('scrooloose/nerdtree')
 call minpac#add('neoclide/coc.nvim', {'branch': 'release'})
 
@@ -42,6 +43,13 @@ function GitGrepFunction(...)
 	copen
 	redraw!
 endfunction
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocActionAsync('doHover')
+  endif
+endfunction
 
 " settings
 syntax on
@@ -72,7 +80,7 @@ set noundofile
 set path+=**
 set wildmenu
 set wildignore+=**/tmp/**,*.so,*.swp,*.zip,**/node_modules/**
-set updatetime=300
+set updatetime=100
 set ttyfast
 set lazyredraw
 colorscheme oolory
@@ -92,6 +100,7 @@ nnoremap <leader>gls <Esc>:GitLogShort<CR>
 nnoremap <leader>glf <Esc>:GitLogFull<CR>
 nnoremap <C-h> <Esc>:bprev<CR>
 nnoremap <C-l> <Esc>:bnext<CR>
+nnoremap <silent> K :call <SID>show_documentation()<CR>
 nmap <silent> gd <Plug>(coc-definition)
 nmap <leader>a <Plug>(coc-codeaction)
 
@@ -102,7 +111,4 @@ let g:netrw_list_hide=netrw_gitignore#Hide()
 
 " completions
 " use `:Format` to format current buffer
-command! -nargs=0 Format :call CocAction('format')
-" Ctrl+Space for completion
-inoremap <silent><expr> <S-Space> coc#refresh()
-
+command! -nargs=0 Format :call CocActionAsync('format')
