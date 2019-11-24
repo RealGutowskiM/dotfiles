@@ -108,6 +108,7 @@ nmap <leader>a <Plug>(coc-codeaction)
 let g:netrw_browse_split=4
 let g:netrw_altv=1
 let g:netrw_list_hide=netrw_gitignore#Hide()
+let NERDTreeShowHidden=1
 
 " completions
 " use `:Format` to format current buffer
