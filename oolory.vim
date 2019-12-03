@@ -28,8 +28,8 @@ hi SpellBad cterm=undercurl ctermfg=NONE ctermbg=NONE
 hi SpellCap cterm=NONE ctermfg=NONE ctermbg=NONE
 hi SpellRare cterm=NONE ctermfg=NONE ctermbg=NONE
 hi WildMenu cterm=NONE ctermfg=NONE ctermbg=NONE
-hi Pmenu cterm=NONE ctermfg=NONE ctermbg=LightGray
-hi PmenuThumb cterm=NONE ctermfg=NONE ctermbg=LightGray
+hi Pmenu cterm=NONE ctermfg=NONE ctermbg=DarkGray
+hi PmenuThumb cterm=NONE ctermfg=NONE ctermbg=DarkGray
 hi SpecialKey cterm=NONE ctermfg=NONE ctermbg=NONE
 hi MatchParen cterm=NONE ctermfg=NONE ctermbg=NONE
 hi CursorLine cterm=NONE ctermfg=NONE ctermbg=NONE
