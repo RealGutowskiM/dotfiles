@@ -103,6 +103,7 @@ nnoremap <C-l> <Esc>:bnext<CR>
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 nmap <silent> gd <Plug>(coc-definition)
 nmap <leader>a <Plug>(coc-codeaction)
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " file browser
 let g:netrw_browse_split=4
