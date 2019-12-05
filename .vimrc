@@ -103,7 +103,7 @@ nnoremap <C-l> <Esc>:bnext<CR>
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 nmap <silent> gd <Plug>(coc-definition)
 nmap <leader>a <Plug>(coc-codeaction)
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <silent><expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " file browser
 let g:netrw_browse_split=4
@@ -114,3 +114,14 @@ let NERDTreeShowHidden=1
 " completions
 " use `:Format` to format current buffer
 command! -nargs=0 Format :call CocActionAsync('format')
+
+" extensions
+let g:coc_global_extensions = [
+			\ 'coc-tsserver',
+			\ 'coc-eslint',
+			\ 'coc-snippets',
+			\ 'coc-emmet',
+			\ 'coc-html',
+			\ 'coc-css',
+			\ 'coc-json'
+			\ ]
