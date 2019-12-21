@@ -1,70 +1,98 @@
 {
-    "editor.minimap.enabled": false,
-    "editor.renderWhitespace": "none",
-    "editor.renderIndentGuides": false,
-    "editor.overviewRulerBorder": false,
-    "editor.hideCursorInOverviewRuler": true,
-    "editor.folding": false,
-    "editor.tabSize": 4,
-    "editor.insertSpaces": true,
-    "editor.detectIndentation": true,
-    "editor.occurrencesHighlight": false,
-    "editor.fontFamily": "'M+ 1m', Consolas, 'Courier New', monospace",
-    "editor.fontSize": 16,
-    "editor.codeActionsOnSave": {
-        "source.fixAll": true,
-        "source.organizeImports": true
-    },
-    "explorer.openEditors.visible": 0,
-    "workbench.editor.enablePreviewFromQuickOpen": false,
-    "workbench.settings.editor": "json",
-    "workbench.activityBar.visible": false,
-    "workbench.editor.tabCloseButton": "off",
-    "workbench.startupEditor": "none",
-    "workbench.list.keyboardNavigation": "simple",
-    "workbench.list.automaticKeyboardNavigation": false,
-    "window.menuBarVisibility": "toggle",
-    "prettier.tabWidth": 4,
-    "prettier.trailingComma": "es5",
-    "nightswitch.sunrise": "06:00",
-    "nightswitch.sunset": "18:00",
-    "nightswitch.themeDay": "oolory",
-    "nightswitch.themeNight": "oolory night",
-    "scrolloff.scrolloff": 10,
-    "vim.easymotion": true,
-    "vim.useSystemClipboard": true,
-    "vim.changeWordIncludesWhitespace": true,
-    "vim.easymotionMarkerHeight": 18,
-    "vim.hlsearch": true,
-    "vim.leader": ",",
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": ["<leader>", "f"],
-            "commands": ["editor.action.formatDocument"]
-        },
-        {
-            "before": ["<C-h>"],
-            "commands": ["workbench.action.previousEditor"]
-        },
-        {
-            "before": ["<C-l>"],
-            "commands": ["workbench.action.nextEditor"]
-        },
-        {
-            "before": ["<leader>", "w"],
-            "commands": ["workbench.action.files.save"]
-        },
-        {
-            "before": ["<space>"],
-            "after": ["<leader>", "<leader>", "s"]
-        },
-        {
-            "before": ["<leader>", "e"],
-            "commands": ["workbench.action.toggleSidebarVisibility"]
-        }
-    ],
-    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
-    "terminal.integrated.shellArgs.windows": ["/k", "%userprofile%\\cmdrc.bat"],
-    "workbench.colorTheme": "oolory",
-    "javascript.updateImportsOnFileMove.enabled": "never"
+	"activitusbar.toggleSidebar": true,
+	"activitusbar.activeColour": "#1a8bfb",
+	"activitusbar.inactiveColour": "#615F61",
+	"editor.minimap.enabled": false,
+	"editor.renderWhitespace": "none",
+	"editor.folding": false,
+	"editor.lineNumbers": "off",
+	"editor.colorDecorators": true,
+	"editor.useTabStops": true,
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+	"editor.occurrencesHighlight": false,
+	"editor.fontSize": 16,
+	"editor.fontFamily": "'SF Mono', Menlo, Monaco, 'Courier New', monospace",
+	"terminal.integrated.fontFamily": "'SF Mono', Menlo, Monaco, 'Courier New', monospace",
+	"editor.cursorSurroundingLines": 10,
+	"explorer.openEditors.visible": 0,
+	"javascript.format.semicolons": "insert",
+	"javascript.preferences.quoteStyle": "double",
+	"vim.camelCaseMotion.enable": true,
+	"vim.easymotion": true,
+	"vim.sneak": true,
+	"vim.useSystemClipboard": true,
+	"vim.hlsearch": true,
+	"vim.leader": ",",
+	"vim.easymotionMarkerHeight": 22,
+	"vim.easymotionMarkerWidthPerChar": 10,
+	"vim.easymotionMarkerFontFamily": "'SF Mono', Menlo, Monaco, 'Courier New', monospace",
+	"vim.normalModeKeyBindingsNonRecursive": [
+		{
+			"before": [
+				"<leader>",
+				"f"
+			],
+			"commands": [
+				"editor.action.formatDocument"
+			]
+		},
+		{
+			"before": [
+				"<C-h>"
+			],
+			"commands": [
+				"workbench.action.previousEditor"
+			]
+		},
+		{
+			"before": [
+				"<C-l>"
+			],
+			"commands": [
+				"workbench.action.nextEditor"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"w"
+			],
+			"commands": [
+				"workbench.action.files.save"
+			]
+		},
+		{
+			"before": [
+				"<space>"
+			],
+			"after": [
+				"<leader>",
+				"<leader>",
+				"s"
+			]
+		},
+		{
+			"before": [
+				"<leader>",
+				"e"
+			],
+			"commands": [
+				"workbench.action.toggleSidebarVisibility"
+			]
+		}
+	],
+	"telemetry.enableTelemetry": false,
+	"telemetry.enableCrashReporter": false,
+	"window.nativeTabs": true,
+	"window.titleBarStyle": "native",
+	"workbench.activityBar.visible": false,
+	"workbench.colorTheme": "MacOS Modern Light - Xcode Default",
+	"workbench.editor.showIcons": false,
+	"workbench.editor.tabCloseButton": "left",
+	"workbench.startupEditor": "none",
+	"workbench.settings.editor": "json",
+	"workbench.list.keyboardNavigation": "simple",
+	"workbench.list.automaticKeyboardNavigation": false,
+	"workbench.iconTheme": "macos-modern-legit-xcode-icon-theme"
 }
