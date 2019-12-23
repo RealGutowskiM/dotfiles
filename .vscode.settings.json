@@ -13,9 +13,10 @@
 	"editor.occurrencesHighlight": false,
 	"editor.fontSize": 16,
 	"editor.fontFamily": "'SF Mono', Menlo, Monaco, 'Courier New', monospace",
-	"terminal.integrated.fontFamily": "'SF Mono', Menlo, Monaco, 'Courier New', monospace",
 	"editor.cursorSurroundingLines": 10,
 	"explorer.openEditors.visible": 0,
+	"html.mirrorCursorOnMatchingTag": false,
+	"terminal.integrated.fontFamily": "'SF Mono', Menlo, Monaco, 'Courier New', monospace",
 	"javascript.format.semicolons": "insert",
 	"javascript.preferences.quoteStyle": "double",
 	"vim.camelCaseMotion.enable": true,
@@ -70,15 +71,6 @@
 				"<leader>",
 				"<leader>",
 				"s"
-			]
-		},
-		{
-			"before": [
-				"<leader>",
-				"e"
-			],
-			"commands": [
-				"workbench.action.toggleSidebarVisibility"
 			]
 		}
 	],
