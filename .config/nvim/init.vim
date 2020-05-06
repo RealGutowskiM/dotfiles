@@ -1,142 +1,93 @@
-" dein
-if &compatible
-  set nocompatible
-endif
-
-call plug#begin('~/.vim/plugged')
-
-Plug 'Shougo/neosnippet'
-Plug 'Shougo/neosnippet-snippets'
-Plug 'sheerun/vim-polyglot'
-Plug 'mattn/emmet-vim'
-Plug 'w0rp/ale'
-Plug 'scrooloose/nerdtree'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'tpope/vim-fugitive'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'tpope/vim-surround'
-Plug 'dracula/vim'
-
-call plug#end()
+set packpath^=~/.vim
+packadd minpac
+call minpac#init()
+call minpac#add('k-takata/minpac', {'type': 'opt'})
+call minpac#add('tpope/vim-surround')
+call minpac#add('sheerun/vim-polyglot')
+call minpac#add('scrooloose/nerdtree')
+call minpac#add('ctrlpvim/ctrlp.vim')
+call minpac#add('itchyny/lightline.vim')
+call minpac#add('neoclide/coc.nvim', {'branch': 'release'})
+call minpac#add('editorconfig/editorconfig-vim')
+call minpac#add('dylanaraps/wal.vim')
 
 filetype plugin indent on
-
-" dracula
-let g:dracula_colorterm = 0
-
-" neosnippet
-imap <C-space> <Plug>(neosnippet_expand_or_jump)
-smap <C-space> <Plug>(neosnippet_expand_or_jump)
-xmap <C-space> <Plug>(neosnippet_expand_target)
-if has('conceal')
-  set conceallevel=2 concealcursor=niv
-endif
-
-" git grep
-func GGitGrep(...)
-  let save = &grepprg
-  set grepprg=git\ grep\ -n\ $*
-  let s = 'grep'
-  for i in a:000
-    let s = s . ' ' . i
-  endfor
-  exe s
-  let &grepprg = save
-endfun
-command! -nargs=+ GitGrep execute 'silent call GGitGrep(<f-args>)' | copen
-map <C-g> <Esc>:GitGrep 
-
-" netrw
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_winsize = 25
-" map <silent> <C-p> <Esc>:Lex<CR>
-
-" NERDTree
-let NERDTreeShowHidden = 1
-map <C-n> :NERDTreeToggle<CR>
-
-" ctrlp
-let g:ctrlp_map = '<C-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_show_hidden = 1
-
-" Delete netrw when it is not in the window
-"autocmd FileType netrw setl bufhidden=wipe
-
-" airline
-let g:airline_theme = 'dracula'
-let g:airline#extensions#branch#enabled = 1 " needs fugitive to work
-let g:airline#extensions#tabline#enabled = 1 
-let g:airline_section_warning = '' 
-let g:airline_section_y = '' 
-let g:airline_section_x = ''
-let g:airline_left_sep = ' ☯ '
-let g:airline_right_sep = ' ☯ '
-set laststatus=2 " always show statusbar
-
-" move lines up and down
-nnoremap <C-j> :m .+1<CR>==
-nnoremap <C-k> :m .-2<CR>==
-inoremap <C-j> <Esc>:m .+1<CR>==gi
-inoremap <C-k> <Esc>:m .-2<CR>==gi
-vnoremap <C-j> :m '>+1<CR>gv=gv
-vnoremap <C-k> :m '<-2<CR>gv=gv
-
-" terminal
-tnoremap <Esc> <C-\><C-n>
-
-" move between buffers
-map <C-h> <Esc>:bprev<CR>
-map <C-l> <Esc>:bnext<CR>
-
-" clear search highlight
-map <C-c> <Esc>:noh<CR>
-
-" javascript
-let g:javascript_plugin_jsdoc = 1
-let g:javascript_plugin_flow = 1
-
-" ALE
-let g:ale_vue_vls_use_global = 1
-let g:ale_linters = {
-\ 'python': ['flake8', 'pyls']
-\}
-let g:ale_fixers = {
-\ 'javascript': ['standard'],
-\ 'python': ['autopep8', 'isort']
-\}
-let g:ale_lint_on_save = 1
-let g:ale_fix_on_save = 1
-let g:ale_completion_enabled = 1
-
-" emmet
-let g:user_emmet_leader_key = '<C-e>'
-
 syntax on
-color dracula
-set termguicolors
-set scrolloff=10
-set list
-set listchars=space:.,tab:>>,trail:$
-set smartindent
-set clipboard+=unnamedplus
-set completeopt=menu,menuone,preview,noselect,noinsert
-set shiftwidth=2
-set tabstop=2
-set softtabstop=2
-set expandtab
-set number relativenumber
-set cursorline
-set ignorecase smartcase
-set showmatch
-set inccommand=split
-set incsearch
-set hlsearch
-set hidden
 set wildmenu
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*
+set belloff=all
+set backspace=indent,eol,start
+set clipboard+=unnamedplus
+set autoindent
+set noexpandtab
+set tabstop=8
+set shiftwidth=8
+set nowrap
 set noswapfile
-set noruler
+set nobackup
+set noundofile
+set notimeout
+set noshowmode
+set visualbell
+set ignorecase smartcase
+set hlsearch
+set incsearch
+set autoread
+set hidden
+set scrolloff=10
+set sidescrolloff=10
+set sidescroll=10
+set splitright splitbelow
+set laststatus=2
+set wildignore+=*/node_modules/*,*/tmp/*,*/.vagrant/*
+set grepprg=grep\ -r\ -n\ --exclude-dir=node_modules\ --exclude-dir=.git\ -I\ $*
+set updatetime=100
+set lazyredraw
+set omnifunc=syntaxcomplete#Complete
+colorscheme wal
+
+command! EditVimrc edit $MYVIMRC
+command! LoadVimrc source $MYVIMRC
+command! PackUpdate call minpac#update()
+command! PackClean call minpac#clean()
+command! PackStatus call minpac#status()
+command! -nargs=+ GitGrep call GitGrepFunction(<f-args>)
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
+
+function GitGrepFunction(...)
+	let l:oldgrep = &grepprg
+	let &grepprg = "git grep -n"
+	silent execute "grep! ".join(a:000)
+	let &grepprg = l:oldgrep
+	silent execute "CtrlPQuickfix"
+endfunction
+
+let g:lightline = {
+			\ 'colorscheme': 'wal',
+			\ }
+let g:ctrlp_working_path_mode = "ra"
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+"let g:ctrlp_root_markers = ['jsconfig.json']
+let NERDTreeShowHidden=1
+let mapleader=","
+let g:coc_global_extensions = [
+			\ 'coc-tsserver',
+			\ 'coc-eslint',
+			\ 'coc-prettier',
+			\ 'coc-snippets',
+			\ 'coc-emmet',
+			\ 'coc-html',
+			\ 'coc-css',
+			\ 'coc-json'
+			\ ]
+
+nnoremap <Esc><Esc> <Esc>:noh<cr>
+nnoremap <leader>b <Esc>:CtrlPBuffer<CR>
+nnoremap <leader>f <Esc>:Prettier<CR>
+nnoremap <C-b> <Esc>:NERDTreeToggle<CR>
+nnoremap <C-h> <Esc>:bprev<CR>
+nnoremap <C-l> <Esc>:bnext<CR>
+nnoremap <leader>gg <Esc>:GitGrep<space>
+
+autocmd FileType qf nnoremap <buffer> <CR> <CR>:cclose<CR>
