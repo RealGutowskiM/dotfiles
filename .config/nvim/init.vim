@@ -42,6 +42,7 @@ set wildignore+=*/node_modules/*,*/tmp/*,*/.vagrant/*
 set grepprg=grep\ -r\ -n\ --exclude-dir=node_modules\ --exclude-dir=.git\ -I\ $*
 set updatetime=100
 set lazyredraw
+set signcolumn=yes
 set omnifunc=syntaxcomplete#Complete
 colorscheme wal
 
@@ -59,6 +60,13 @@ function GitGrepFunction(...)
 	silent execute "grep! ".join(a:000)
 	let &grepprg = l:oldgrep
 	silent execute "CtrlPQuickfix"
+endfunction
+function! s:show_documentation()
+	if (index(['vim','help'], &filetype) >= 0)
+		execute 'h '.expand('<cword>')
+	else
+		call CocAction('doHover')
+	endif
 endfunction
 
 let g:lightline = {
@@ -89,5 +97,13 @@ nnoremap <C-b> <Esc>:NERDTreeToggle<CR>
 nnoremap <C-h> <Esc>:bprev<CR>
 nnoremap <C-l> <Esc>:bnext<CR>
 nnoremap <leader>gg <Esc>:GitGrep<space>
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <silent><expr> <c-space> coc#refresh()
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 autocmd FileType qf nnoremap <buffer> <CR> <CR>:cclose<CR>
