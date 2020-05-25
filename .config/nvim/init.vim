@@ -4,16 +4,13 @@ call minpac#init()
 call minpac#add('k-takata/minpac', {'type': 'opt'})
 call minpac#add('tpope/vim-surround')
 call minpac#add('sheerun/vim-polyglot')
-call minpac#add('scrooloose/nerdtree')
-call minpac#add('ctrlpvim/ctrlp.vim')
 call minpac#add('itchyny/lightline.vim')
 call minpac#add('neoclide/coc.nvim', {'branch': 'release'})
 call minpac#add('editorconfig/editorconfig-vim')
 call minpac#add('dylanaraps/wal.vim')
 
 filetype plugin indent on
-syntax on
-set wildmenu
+syntax enable
 set belloff=all
 set backspace=indent,eol,start
 set clipboard+=unnamedplus
@@ -27,6 +24,7 @@ set nobackup
 set noundofile
 set notimeout
 set noshowmode
+set noshowcmd
 set visualbell
 set ignorecase smartcase
 set hlsearch
@@ -38,7 +36,11 @@ set sidescrolloff=10
 set sidescroll=10
 set splitright splitbelow
 set laststatus=2
-set wildignore+=*/node_modules/*,*/tmp/*,*/.vagrant/*
+set path+=**
+set wildmenu
+set wildoptions=pum
+set wildignorecase
+set wildignore+=**/node_modules/**,**/tmp/**,**/.vagrant/**,**/.git/**
 set grepprg=grep\ -r\ -n\ --exclude-dir=node_modules\ --exclude-dir=.git\ -I\ $*
 set updatetime=100
 set lazyredraw
@@ -72,12 +74,6 @@ endfunction
 let g:lightline = {
 			\ 'colorscheme': 'wal',
 			\ }
-let g:ctrlp_working_path_mode = "ra"
-let g:ctrlp_show_hidden = 1
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-"let g:ctrlp_root_markers = ['jsconfig.json']
-let NERDTreeShowHidden=1
 let mapleader=","
 let g:coc_global_extensions = [
 			\ 'coc-tsserver',
@@ -91,9 +87,7 @@ let g:coc_global_extensions = [
 			\ ]
 
 nnoremap <Esc><Esc> <Esc>:noh<cr>
-nnoremap <leader>b <Esc>:CtrlPBuffer<CR>
 nnoremap <leader>f <Esc>:Prettier<CR>
-nnoremap <C-b> <Esc>:NERDTreeToggle<CR>
 nnoremap <C-h> <Esc>:bprev<CR>
 nnoremap <C-l> <Esc>:bnext<CR>
 nnoremap <leader>gg <Esc>:GitGrep<space>
