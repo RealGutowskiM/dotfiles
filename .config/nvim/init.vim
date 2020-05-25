@@ -38,6 +38,7 @@ set splitright splitbelow
 set laststatus=2
 set path+=**
 set wildmenu
+set wildmode=list:longest,full
 set wildoptions=pum
 set wildignorecase
 set wildignore+=**/node_modules/**,**/tmp/**,**/.vagrant/**,**/.git/**
