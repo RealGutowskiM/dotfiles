@@ -62,7 +62,6 @@ function GitGrepFunction(...)
 	let &grepprg = "git grep -n"
 	silent execute "grep! ".join(a:000)
 	let &grepprg = l:oldgrep
-	silent execute "CtrlPQuickfix"
 endfunction
 function! s:show_documentation()
 	if (index(['vim','help'], &filetype) >= 0)
@@ -102,4 +101,6 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-autocmd FileType qf nnoremap <buffer> <CR> <CR>:cclose<CR>
+autocmd FileType qf nnoremap <silent> <buffer> <CR> <CR>:cclose<CR>
+autocmd QuickFixCmdPost [^l]* nested copen
+autocmd QuickFixCmdPost    l* nested lopen
