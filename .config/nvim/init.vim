@@ -4,7 +4,6 @@ call minpac#init()
 call minpac#add('k-takata/minpac', {'type': 'opt'})
 call minpac#add('tpope/vim-surround')
 call minpac#add('sheerun/vim-polyglot')
-call minpac#add('itchyny/lightline.vim')
 call minpac#add('neoclide/coc.nvim', {'branch': 'release'})
 call minpac#add('editorconfig/editorconfig-vim')
 call minpac#add('dylanaraps/wal.vim')
@@ -23,7 +22,6 @@ set noswapfile
 set nobackup
 set noundofile
 set notimeout
-set noshowmode
 set noshowcmd
 set visualbell
 set ignorecase smartcase
@@ -71,9 +69,6 @@ function! s:show_documentation()
 	endif
 endfunction
 
-let g:lightline = {
-			\ 'colorscheme': 'wal',
-			\ }
 let mapleader=","
 let g:coc_global_extensions = [
 			\ 'coc-tsserver',
