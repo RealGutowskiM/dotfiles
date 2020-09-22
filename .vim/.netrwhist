@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/Users/michalgutowski/git/clean_architecture'
+let g:netrw_dirhist_7='/Users/michalgutowski/.vim'
+let g:netrw_dirhist_6='/Users/michalgutowski/.vim/after'
+let g:netrw_dirhist_5='/Users/michalgutowski/.vim'
+let g:netrw_dirhist_4='/Users/michalgutowski/.vim/after/ftplugin'
+let g:netrw_dirhist_3='/Users/michalgutowski/.vim/after'
+let g:netrw_dirhist_2='/Users/michalgutowski/.vim'
+let g:netrw_dirhist_1='/Users/michalgutowski/git/clean_architecture'
+let g:netrw_dirhist_0='/Users/michalgutowski/.vim'
+let g:netrw_dirhist_9='/Users/michalgutowski/git/clean_architecture'

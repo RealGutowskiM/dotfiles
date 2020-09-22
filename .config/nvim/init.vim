@@ -47,7 +47,7 @@ set signcolumn=yes
 set omnifunc=syntaxcomplete#Complete
 colorscheme wal
 
-command! ModifyVimrc edit $MYVIMRC
+command! EditVimrc edit $MYVIMRC
 command! LoadVimrc source $MYVIMRC
 command! PackUpdate call minpac#update()
 command! PackClean call minpac#clean()

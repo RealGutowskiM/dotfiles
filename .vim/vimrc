@@ -1,0 +1,17 @@
+filetype plugin indent on
+syntax enable
+
+set backspace=start,eol,indent
+set hidden
+
+" Use only ~/.vim as runtime path
+let $RTP=split(&runtimepath, ',')[0]
+" Set path to our vimrc
+let $RC="$HOME/.vim/vimrc"
+
+set path=.,**
+set wildignore=*/.git*,*/.vagrant*
+
+set noswapfile
+set incsearch ignorecase smartcase
+colo oolory
