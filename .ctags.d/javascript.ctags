@@ -1,0 +1,7 @@
+--recurse=yes
+--exclude=.git
+--exclude=.vagrant
+--exclude=node_modules
+--exclude=dist/*
+--exclude=build/*
+--exclude=package-lock.json

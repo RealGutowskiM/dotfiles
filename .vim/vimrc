@@ -12,6 +12,8 @@ let $RC="$HOME/.vim/vimrc"
 set path=.,**
 set wildignore=*/.git*,*/.vagrant*
 
-set noswapfile
+set noswapfile nowritebackup
 set incsearch ignorecase smartcase
+set shiftwidth=8 tabstop=8 softtabstop=8 noexpandtab autoindent smartindent
+
 colo oolory
