@@ -10,10 +10,18 @@ let $RTP=split(&runtimepath, ',')[0]
 let $RC="$HOME/.vim/vimrc"
 
 set path=.,**
+set wildmenu
 set wildignore=*/.git*,*/.vagrant*
 
 set noswapfile nowritebackup
 set incsearch ignorecase smartcase
+set hlsearch
+set showmatch
 set shiftwidth=8 tabstop=8 softtabstop=8 noexpandtab autoindent smartindent
+
+set ttyfast
+set scrolloff=10
+set encoding=utf-8
+set ruler
 
 colo oolory
