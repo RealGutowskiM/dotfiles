@@ -1,7 +1,7 @@
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
 export LC_ALL=en_GB.UTF-8
+
+# Add local sbin to path
+export PATH="$PATH:/usr/local/sbin"
 
 # Modify the prompt
 #export RPROMPT='%W %t'
@@ -18,3 +18,7 @@ alias gs='git status'
 alias gls='git log --graph --all --oneline'
 alias glf='git log --graph --all'
 alias vagrant='/usr/local/bin/vagrant'
+
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
