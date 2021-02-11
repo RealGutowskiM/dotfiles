@@ -31,5 +31,3 @@ set lazyredraw
 set scrolloff=10
 set encoding=utf-8
 set ruler
-
-colo oolory
