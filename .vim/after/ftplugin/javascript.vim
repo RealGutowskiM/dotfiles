@@ -1,4 +1,4 @@
-setlocal shiftwidth=8 tabstop=8 softtabstop=8 noexpandtab autoindent smartindent
+setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab autoindent smartindent
 
 setlocal include=\\%(\\<require\\s*(\\s*\\\|\\<import\\>[^;\"']*\\)[\"']\\zs[^\"']*
 

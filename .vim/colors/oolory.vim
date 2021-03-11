@@ -6,77 +6,77 @@ endif
 let colors_name="oolory"
 
 if &background ==# 'dark'
-	hi SpecialKey	ctermfg=white
-	hi NonText	ctermfg=white
-	hi Directory	ctermfg=white
-	hi ErrorMsg	ctermfg=white
-	hi IncSearch	ctermfg=white
-	hi Search	ctermfg=white
-	hi MoreMsg	ctermfg=white
-	hi ModeMsg	ctermfg=white
-	hi LineNr	ctermfg=white
-	hi Question	ctermfg=white
-	hi StatusLine	ctermfg=white
-	hi StatusLineNC ctermfg=white
-	hi VertSplit	ctermfg=white
-	hi Title	ctermfg=white
-	hi Visual	ctermfg=white
-	hi VisualNOS	ctermfg=white
-	hi WarningMsg	ctermfg=white
-	hi WildMenu	ctermfg=white
-	hi Folded	ctermfg=white
-	hi FoldColumn	ctermfg=white
-	hi DiffAdd	ctermfg=white
-	hi DiffChange	ctermfg=white
-	hi DiffDelete	ctermfg=white
-	hi DiffText	ctermfg=white
-	hi Comment	ctermfg=grey
-	hi Constant	ctermfg=grey
-	hi Keyword	cterm=bold ctermfg=white
-	hi Special	ctermfg=white
-	hi Identifier	ctermfg=white
-	hi Statement	cterm=bold ctermfg=white
-	hi PreProc	ctermfg=grey
-	hi Type		ctermfg=white
-	hi Underlined	ctermfg=white
-	hi Ignore	ctermfg=white
-	hi Ignore	ctermfg=white
-	hi Error	ctermfg=white
+	hi SpecialKey	ctermfg=7
+	hi NonText	ctermfg=7
+	hi Directory	ctermfg=7
+	hi ErrorMsg	ctermfg=7
+	hi IncSearch	ctermfg=7
+	hi Search	ctermfg=7
+	hi MoreMsg	ctermfg=7
+	hi ModeMsg	ctermfg=7
+	hi LineNr	ctermfg=7
+	hi Question	ctermfg=7
+	hi StatusLine	ctermfg=7
+	hi StatusLineNC ctermfg=7
+	hi VertSplit	ctermfg=7
+	hi Title	ctermfg=7
+	hi Visual	ctermfg=7
+	hi VisualNOS	ctermfg=7
+	hi WarningMsg	ctermfg=7
+	hi WildMenu	ctermfg=7
+	hi Folded	ctermfg=7
+	hi FoldColumn	ctermfg=7
+	hi DiffAdd	ctermfg=10 ctermbg=none
+	hi DiffChange	ctermfg=13 ctermbg=none
+	hi DiffDelete	ctermfg=9 ctermbg=none
+	hi DiffText	ctermfg=11 ctermbg=none
+	hi Comment	ctermfg=15
+	hi Constant	ctermfg=15
+	hi Keyword	cterm=bold ctermfg=7
+	hi Special	ctermfg=7
+	hi Identifier	cterm=none ctermfg=12
+	hi Statement	cterm=bold ctermfg=7
+	hi PreProc	ctermfg=7
+	hi Type		ctermfg=7
+	hi Underlined	ctermfg=7
+	hi Ignore	ctermfg=7
+	hi Ignore	ctermfg=7
+	hi Error	ctermfg=7
 else
-	hi SpecialKey	ctermfg=black
-	hi NonText	ctermfg=black
-	hi Directory	ctermfg=black
-	hi ErrorMsg	ctermfg=black
-	hi IncSearch	ctermfg=black
-	hi Search	ctermfg=black
-	hi MoreMsg	ctermfg=black
-	hi ModeMsg	ctermfg=black
-	hi LineNr	ctermfg=black
-	hi Question	ctermfg=black
-	hi StatusLine	ctermfg=black
-	hi StatusLineNC ctermfg=black
-	hi VertSplit	ctermfg=black
-	hi Title	ctermfg=black
-	hi Visual	ctermfg=black
-	hi VisualNOS	ctermfg=black
-	hi WarningMsg	ctermfg=black
-	hi WildMenu	ctermfg=black
-	hi Folded	ctermfg=black
-	hi FoldColumn	ctermfg=black
-	hi DiffAdd	ctermfg=black
-	hi DiffChange	ctermfg=black
-	hi DiffDelete	ctermfg=black
-	hi DiffText	ctermfg=black
-	hi Comment	ctermfg=grey
-	hi Constant	ctermfg=grey
-	hi Keyword	cterm=bold ctermfg=black
-	hi Special	ctermfg=black
-	hi Identifier	ctermfg=black
-	hi Statement	cterm=bold ctermfg=black
-	hi PreProc	ctermfg=grey
-	hi Type		ctermfg=black
-	hi Underlined	ctermfg=black
-	hi Ignore	ctermfg=black
-	hi Ignore	ctermfg=black
-	hi Error	ctermfg=black
+	hi SpecialKey	ctermfg=0
+	hi NonText	ctermfg=0
+	hi Directory	ctermfg=0
+	hi ErrorMsg	ctermfg=0
+	hi IncSearch	ctermfg=0
+	hi Search	ctermfg=0
+	hi MoreMsg	ctermfg=0
+	hi ModeMsg	ctermfg=0
+	hi LineNr	ctermfg=0
+	hi Question	ctermfg=0
+	hi StatusLine	ctermfg=0
+	hi StatusLineNC ctermfg=0
+	hi VertSplit	ctermfg=0
+	hi Title	ctermfg=0
+	hi Visual	ctermfg=0
+	hi VisualNOS	ctermfg=0
+	hi WarningMsg	ctermfg=0
+	hi WildMenu	ctermfg=0
+	hi Folded	ctermfg=0
+	hi FoldColumn	ctermfg=0
+	hi DiffAdd	ctermfg=0 ctermbg=10
+	hi DiffChange	ctermfg=0 ctermbg=13
+	hi DiffDelete	ctermfg=0 ctermbg=9
+	hi DiffText	ctermfg=0 ctermbg=11
+	hi Comment	ctermfg=8
+	hi Constant	ctermfg=8
+	hi Keyword	cterm=bold ctermfg=0
+	hi Special	ctermfg=0
+	hi Identifier	cterm=none ctermfg=4
+	hi Statement	cterm=bold ctermfg=0
+	hi PreProc	ctermfg=0
+	hi Type		ctermfg=0
+	hi Underlined	ctermfg=0
+	hi Ignore	ctermfg=0
+	hi Ignore	ctermfg=0
+	hi Error	ctermfg=0
 endif
