@@ -14,7 +14,3 @@ alias edit-vim-config='vi ~/.vim/vimrc'
 alias gs='git status'
 alias gls='git log --graph --all --oneline'
 alias glf='git log --graph --all'
-
-export NVM_DIR="$HOME/.nvm"
-  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
