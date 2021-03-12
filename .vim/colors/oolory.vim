@@ -16,14 +16,14 @@ if &background ==# 'dark'
 	hi ModeMsg	ctermfg=7
 	hi LineNr	ctermfg=7
 	hi Question	ctermfg=7
-	hi StatusLine	ctermfg=7
-	hi StatusLineNC ctermfg=7
+	hi StatusLine	cterm=none ctermfg=7 ctermbg=none
+	hi StatusLineNC cterm=none ctermfg=15 ctermbg=none
 	hi VertSplit	ctermfg=7
 	hi Title	ctermfg=7
-	hi Visual	ctermfg=7
-	hi VisualNOS	ctermfg=7
+	hi Visual	cterm=none ctermfg=7 ctermbg=13
+	hi VisualNOS	cterm=none ctermfg=7 ctermbg=13
 	hi WarningMsg	ctermfg=7
-	hi WildMenu	ctermfg=7
+	hi WildMenu	cterm=bold ctermfg=7 ctermbg=12
 	hi Folded	ctermfg=7
 	hi FoldColumn	ctermfg=7
 	hi DiffAdd	ctermfg=10 ctermbg=none
@@ -40,7 +40,6 @@ if &background ==# 'dark'
 	hi Type		ctermfg=7
 	hi Underlined	ctermfg=7
 	hi Ignore	ctermfg=7
-	hi Ignore	ctermfg=7
 	hi Error	ctermfg=7
 else
 	hi SpecialKey	ctermfg=0
@@ -53,14 +52,15 @@ else
 	hi ModeMsg	ctermfg=0
 	hi LineNr	ctermfg=0
 	hi Question	ctermfg=0
-	hi StatusLine	ctermfg=0
-	hi StatusLineNC ctermfg=0
+	hi StatusLine	cterm=none ctermfg=0 ctermbg=none
+	hi StatusLineNC cterm=none ctermfg=8 ctermbg=none
 	hi VertSplit	ctermfg=0
 	hi Title	ctermfg=0
-	hi Visual	ctermfg=0
-	hi VisualNOS	ctermfg=0
+	hi Visual	cterm=none ctermfg=0 ctermbg=5
+	hi VisualNOS	cterm=none ctermfg=0 ctermbg=5
 	hi WarningMsg	ctermfg=0
 	hi WildMenu	ctermfg=0
+	hi WildMenu	cterm=bold ctermfg=0 ctermbg=4
 	hi Folded	ctermfg=0
 	hi FoldColumn	ctermfg=0
 	hi DiffAdd	ctermfg=0 ctermbg=10
@@ -76,7 +76,6 @@ else
 	hi PreProc	ctermfg=0
 	hi Type		ctermfg=0
 	hi Underlined	ctermfg=0
-	hi Ignore	ctermfg=0
 	hi Ignore	ctermfg=0
 	hi Error	ctermfg=0
 endif
