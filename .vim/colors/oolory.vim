@@ -10,15 +10,15 @@ if &background ==# 'dark'
 	hi NonText	ctermfg=7
 	hi Directory	ctermfg=7
 	hi ErrorMsg	ctermfg=7
-	hi IncSearch	ctermfg=7
-	hi Search	ctermfg=7
+	hi IncSearch	cterm=reverse ctermfg=7 ctermbg=none 
+	hi Search	cterm=reverse ctermfg=11 ctermbg=none 
 	hi MoreMsg	ctermfg=7
 	hi ModeMsg	ctermfg=7
 	hi LineNr	ctermfg=7
 	hi Question	ctermfg=7
 	hi StatusLine	cterm=none ctermfg=7 ctermbg=none
 	hi StatusLineNC cterm=none ctermfg=15 ctermbg=none
-	hi VertSplit	ctermfg=7
+	hi VertSplit	cterm=none ctermfg=12
 	hi Title	ctermfg=7
 	hi Visual	cterm=none ctermfg=7 ctermbg=13
 	hi VisualNOS	cterm=none ctermfg=7 ctermbg=13
@@ -54,7 +54,7 @@ else
 	hi Question	ctermfg=0
 	hi StatusLine	cterm=none ctermfg=0 ctermbg=none
 	hi StatusLineNC cterm=none ctermfg=8 ctermbg=none
-	hi VertSplit	ctermfg=0
+	hi VertSplit	cterm=none ctermfg=4
 	hi Title	ctermfg=0
 	hi Visual	cterm=none ctermfg=0 ctermbg=5
 	hi VisualNOS	cterm=none ctermfg=0 ctermbg=5
